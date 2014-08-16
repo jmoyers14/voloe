@@ -1,479 +1,1151 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		5AE5E1C7199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
-		5AE5E1C9199F12E9007CDA0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */; };
-		5AE5E1CB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
-		5AE5E1D1199F12E9007CDA0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1CF199F12E9007CDA0D /* InfoPlist.strings */; };
-		5AE5E1D3199F12E9007CDA0D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1D2199F12E9007CDA0D /* main.m */; };
-		5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */; };
-		5AE5E1DA199F12E9007CDA0D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */; };
-		5AE5E1DD199F12E9007CDA0D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1DB199F12E9007CDA0D /* Main_iPad.storyboard */; };
-		5AE5E1E2199F12E9007CDA0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1E1199F12E9007CDA0D /* Images.xcassets */; };
-		5AE5E1E9199F12E9007CDA0D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1E8199F12E9007CDA0D /* XCTest.framework */; };
-		5AE5E1EA199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
-		5AE5E1EB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
-		5AE5E1F3199F12E9007CDA0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F1199F12E9007CDA0D /* InfoPlist.strings */; };
-		5AE5E1F5199F12E9007CDA0D /* VoloeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		5AE5E1EC199F12E9007CDA0D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 5AE5E1BB199F12E8007CDA0D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5AE5E1C2199F12E8007CDA0D;
-			remoteInfo = Voloe;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		5AE5E1C3199F12E9007CDA0D /* Voloe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voloe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AE5E1C6199F12E9007CDA0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		5AE5E1CA199F12E9007CDA0D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		5AE5E1CE199F12E9007CDA0D /* Voloe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Voloe-Info.plist"; sourceTree = "<group>"; };
-		5AE5E1D0199F12E9007CDA0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5AE5E1D2199F12E9007CDA0D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5AE5E1D4199F12E9007CDA0D /* Voloe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Voloe-Prefix.pch"; sourceTree = "<group>"; };
-		5AE5E1D5199F12E9007CDA0D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5AE5E1D9199F12E9007CDA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		5AE5E1DC199F12E9007CDA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		5AE5E1E1199F12E9007CDA0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5AE5E1E7199F12E9007CDA0D /* VoloeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoloeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AE5E1E8199F12E9007CDA0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		5AE5E1F0199F12E9007CDA0D /* VoloeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoloeTests-Info.plist"; sourceTree = "<group>"; };
-		5AE5E1F2199F12E9007CDA0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoloeTests.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		5AE5E1C0199F12E8007CDA0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1C9199F12E9007CDA0D /* CoreGraphics.framework in Frameworks */,
-				5AE5E1CB199F12E9007CDA0D /* UIKit.framework in Frameworks */,
-				5AE5E1C7199F12E9007CDA0D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AE5E1E4199F12E9007CDA0D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1E9199F12E9007CDA0D /* XCTest.framework in Frameworks */,
-				5AE5E1EB199F12E9007CDA0D /* UIKit.framework in Frameworks */,
-				5AE5E1EA199F12E9007CDA0D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		5AE5E1BA199F12E8007CDA0D = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1CC199F12E9007CDA0D /* Voloe */,
-				5AE5E1EE199F12E9007CDA0D /* VoloeTests */,
-				5AE5E1C5199F12E9007CDA0D /* Frameworks */,
-				5AE5E1C4199F12E9007CDA0D /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		5AE5E1C4199F12E9007CDA0D /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1C3199F12E9007CDA0D /* Voloe.app */,
-				5AE5E1E7199F12E9007CDA0D /* VoloeTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		5AE5E1C5199F12E9007CDA0D /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1C6199F12E9007CDA0D /* Foundation.framework */,
-				5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */,
-				5AE5E1CA199F12E9007CDA0D /* UIKit.framework */,
-				5AE5E1E8199F12E9007CDA0D /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5AE5E1CC199F12E9007CDA0D /* Voloe */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1D5199F12E9007CDA0D /* AppDelegate.h */,
-				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
-				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
-				5AE5E1DB199F12E9007CDA0D /* Main_iPad.storyboard */,
-				5AE5E1E1199F12E9007CDA0D /* Images.xcassets */,
-				5AE5E1CD199F12E9007CDA0D /* Supporting Files */,
-			);
-			path = Voloe;
-			sourceTree = "<group>";
-		};
-		5AE5E1CD199F12E9007CDA0D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1CE199F12E9007CDA0D /* Voloe-Info.plist */,
-				5AE5E1CF199F12E9007CDA0D /* InfoPlist.strings */,
-				5AE5E1D2199F12E9007CDA0D /* main.m */,
-				5AE5E1D4199F12E9007CDA0D /* Voloe-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5AE5E1EE199F12E9007CDA0D /* VoloeTests */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */,
-				5AE5E1EF199F12E9007CDA0D /* Supporting Files */,
-			);
-			path = VoloeTests;
-			sourceTree = "<group>";
-		};
-		5AE5E1EF199F12E9007CDA0D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5AE5E1F0199F12E9007CDA0D /* VoloeTests-Info.plist */,
-				5AE5E1F1199F12E9007CDA0D /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		5AE5E1C2199F12E8007CDA0D /* Voloe */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AE5E1F8199F12E9007CDA0D /* Build configuration list for PBXNativeTarget "Voloe" */;
-			buildPhases = (
-				5AE5E1BF199F12E8007CDA0D /* Sources */,
-				5AE5E1C0199F12E8007CDA0D /* Frameworks */,
-				5AE5E1C1199F12E8007CDA0D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Voloe;
-			productName = Voloe;
-			productReference = 5AE5E1C3199F12E9007CDA0D /* Voloe.app */;
-			productType = "com.apple.product-type.application";
-		};
-		5AE5E1E6199F12E9007CDA0D /* VoloeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5AE5E1FB199F12E9007CDA0D /* Build configuration list for PBXNativeTarget "VoloeTests" */;
-			buildPhases = (
-				5AE5E1E3199F12E9007CDA0D /* Sources */,
-				5AE5E1E4199F12E9007CDA0D /* Frameworks */,
-				5AE5E1E5199F12E9007CDA0D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5AE5E1ED199F12E9007CDA0D /* PBXTargetDependency */,
-			);
-			name = VoloeTests;
-			productName = VoloeTests;
-			productReference = 5AE5E1E7199F12E9007CDA0D /* VoloeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		5AE5E1BB199F12E8007CDA0D /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = "Jeremy Moyers";
-				TargetAttributes = {
-					5AE5E1E6199F12E9007CDA0D = {
-						TestTargetID = 5AE5E1C2199F12E8007CDA0D;
-					};
-				};
-			};
-			buildConfigurationList = 5AE5E1BE199F12E8007CDA0D /* Build configuration list for PBXProject "Voloe" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 5AE5E1BA199F12E8007CDA0D;
-			productRefGroup = 5AE5E1C4199F12E9007CDA0D /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				5AE5E1C2199F12E8007CDA0D /* Voloe */,
-				5AE5E1E6199F12E9007CDA0D /* VoloeTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		5AE5E1C1199F12E8007CDA0D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1DD199F12E9007CDA0D /* Main_iPad.storyboard in Resources */,
-				5AE5E1E2199F12E9007CDA0D /* Images.xcassets in Resources */,
-				5AE5E1DA199F12E9007CDA0D /* Main_iPhone.storyboard in Resources */,
-				5AE5E1D1199F12E9007CDA0D /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AE5E1E5199F12E9007CDA0D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1F3199F12E9007CDA0D /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		5AE5E1BF199F12E8007CDA0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
-				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5AE5E1E3199F12E9007CDA0D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AE5E1F5199F12E9007CDA0D /* VoloeTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		5AE5E1ED199F12E9007CDA0D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5AE5E1C2199F12E8007CDA0D /* Voloe */;
-			targetProxy = 5AE5E1EC199F12E9007CDA0D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		5AE5E1CF199F12E9007CDA0D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AE5E1D0199F12E9007CDA0D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AE5E1D9199F12E9007CDA0D /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		5AE5E1DB199F12E9007CDA0D /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AE5E1DC199F12E9007CDA0D /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		5AE5E1F1199F12E9007CDA0D /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AE5E1F2199F12E9007CDA0D /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		5AE5E1F6199F12E9007CDA0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		5AE5E1F7199F12E9007CDA0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		5AE5E1F9199F12E9007CDA0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voloe/Voloe-Prefix.pch";
-				INFOPLIST_FILE = "Voloe/Voloe-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		5AE5E1FA199F12E9007CDA0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voloe/Voloe-Prefix.pch";
-				INFOPLIST_FILE = "Voloe/Voloe-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		5AE5E1FC199F12E9007CDA0D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voloe/Voloe-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "VoloeTests/VoloeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		5AE5E1FD199F12E9007CDA0D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Voloe/Voloe-Prefix.pch";
-				INFOPLIST_FILE = "VoloeTests/VoloeTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		5AE5E1BE199F12E8007CDA0D /* Build configuration list for PBXProject "Voloe" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AE5E1F6199F12E9007CDA0D /* Debug */,
-				5AE5E1F7199F12E9007CDA0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5AE5E1F8199F12E9007CDA0D /* Build configuration list for PBXNativeTarget "Voloe" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AE5E1F9199F12E9007CDA0D /* Debug */,
-				5AE5E1FA199F12E9007CDA0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		5AE5E1FB199F12E9007CDA0D /* Build configuration list for PBXNativeTarget "VoloeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5AE5E1FC199F12E9007CDA0D /* Debug */,
-				5AE5E1FD199F12E9007CDA0D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 5AE5E1BB199F12E8007CDA0D /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>391D0C503C964F22B8E573C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F1E4C76309824F74A3F2D8E2</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5A3A9B17199F36600038B04B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>LoungeViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A3A9B18199F36600038B04B</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>LoungeViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5A3A9B19199F36600038B04B</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5A3A9B18199F36600038B04B</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1BA199F12E8007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1CC199F12E9007CDA0D</string>
+				<string>5AE5E1EE199F12E9007CDA0D</string>
+				<string>5AE5E1C5199F12E9007CDA0D</string>
+				<string>5AE5E1C4199F12E9007CDA0D</string>
+				<string>7813ECD9320147EBA25ED9F1</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1BB199F12E8007CDA0D</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0510</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Jeremy Moyers</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>5AE5E1E6199F12E9007CDA0D</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>5AE5E1C2199F12E8007CDA0D</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>5AE5E1BE199F12E8007CDA0D</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>5AE5E1BA199F12E8007CDA0D</string>
+			<key>productRefGroup</key>
+			<string>5AE5E1C4199F12E9007CDA0D</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>5AE5E1C2199F12E8007CDA0D</string>
+				<string>5AE5E1E6199F12E9007CDA0D</string>
+			</array>
+		</dict>
+		<key>5AE5E1BE199F12E8007CDA0D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5AE5E1F6199F12E9007CDA0D</string>
+				<string>5AE5E1F7199F12E9007CDA0D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5AE5E1BF199F12E8007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1D7199F12E9007CDA0D</string>
+				<string>5AE5E200199F1463007CDA0D</string>
+				<string>5A3A9B19199F36600038B04B</string>
+				<string>5AE5E1D3199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1C0199F12E8007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1C9199F12E9007CDA0D</string>
+				<string>5AE5E1CB199F12E9007CDA0D</string>
+				<string>5AE5E1C7199F12E9007CDA0D</string>
+				<string>391D0C503C964F22B8E573C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1C1199F12E8007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1E2199F12E9007CDA0D</string>
+				<string>5AE5E1DA199F12E9007CDA0D</string>
+				<string>5AE5E1D1199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1C2199F12E8007CDA0D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>5AE5E1F8199F12E9007CDA0D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>6161076A6FE142698E941D6C</string>
+				<string>5AE5E1BF199F12E8007CDA0D</string>
+				<string>5AE5E1C0199F12E8007CDA0D</string>
+				<string>5AE5E1C1199F12E8007CDA0D</string>
+				<string>79A9C2F86C974FD28A0C39BA</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Voloe</string>
+			<key>productName</key>
+			<string>Voloe</string>
+			<key>productReference</key>
+			<string>5AE5E1C3199F12E9007CDA0D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>5AE5E1C3199F12E9007CDA0D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Voloe.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5AE5E1C4199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1C3199F12E9007CDA0D</string>
+				<string>5AE5E1E7199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1C5199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1C6199F12E9007CDA0D</string>
+				<string>5AE5E1C8199F12E9007CDA0D</string>
+				<string>5AE5E1CA199F12E9007CDA0D</string>
+				<string>5AE5E1E8199F12E9007CDA0D</string>
+				<string>F1E4C76309824F74A3F2D8E2</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1C6199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>5AE5E1C7199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1C6199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1C8199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>5AE5E1C9199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1C8199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1CA199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>5AE5E1CB199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1CA199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1CC199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1D5199F12E9007CDA0D</string>
+				<string>5AE5E1D6199F12E9007CDA0D</string>
+				<string>5AE5E202199F1472007CDA0D</string>
+				<string>5AE5E201199F1468007CDA0D</string>
+				<string>5AE5E1D8199F12E9007CDA0D</string>
+				<string>5AE5E1E1199F12E9007CDA0D</string>
+				<string>5AE5E1CD199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Voloe</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1CD199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1CE199F12E9007CDA0D</string>
+				<string>5AE5E1CF199F12E9007CDA0D</string>
+				<string>5AE5E1D2199F12E9007CDA0D</string>
+				<string>5AE5E1D4199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1CE199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Voloe-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1CF199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1D0199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D0199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D1199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1CF199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1D2199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D3199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1D2199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1D4199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Voloe-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D5199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>AppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D6199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>AppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D7199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1D6199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1D8199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1D9199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1D9199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main_iPhone.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1DA199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1D8199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1E1199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1E2199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1E1199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1E3199F12E9007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1F5199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1E4199F12E9007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1E9199F12E9007CDA0D</string>
+				<string>5AE5E1EB199F12E9007CDA0D</string>
+				<string>5AE5E1EA199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1E5199F12E9007CDA0D</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>5AE5E1F3199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>5AE5E1E6199F12E9007CDA0D</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>5AE5E1FB199F12E9007CDA0D</string>
+			<key>buildPhases</key>
+			<array>
+				<string>5AE5E1E3199F12E9007CDA0D</string>
+				<string>5AE5E1E4199F12E9007CDA0D</string>
+				<string>5AE5E1E5199F12E9007CDA0D</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>5AE5E1ED199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>VoloeTests</string>
+			<key>productName</key>
+			<string>VoloeTests</string>
+			<key>productReference</key>
+			<string>5AE5E1E7199F12E9007CDA0D</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>5AE5E1E7199F12E9007CDA0D</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>VoloeTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>5AE5E1E8199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>5AE5E1E9199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1E8199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1EA199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1C6199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1EB199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1CA199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1EC199F12E9007CDA0D</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>5AE5E1BB199F12E8007CDA0D</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>5AE5E1C2199F12E8007CDA0D</string>
+			<key>remoteInfo</key>
+			<string>Voloe</string>
+		</dict>
+		<key>5AE5E1ED199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>5AE5E1C2199F12E8007CDA0D</string>
+			<key>targetProxy</key>
+			<string>5AE5E1EC199F12E9007CDA0D</string>
+		</dict>
+		<key>5AE5E1EE199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1F4199F12E9007CDA0D</string>
+				<string>5AE5E1EF199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>VoloeTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1EF199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1F0199F12E9007CDA0D</string>
+				<string>5AE5E1F1199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1F0199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>VoloeTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1F1199F12E9007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1F2199F12E9007CDA0D</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1F2199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1F3199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1F1199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1F4199F12E9007CDA0D</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>VoloeTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1F5199F12E9007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1F4199F12E9007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E1F6199F12E9007CDA0D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5AE5E1F7199F12E9007CDA0D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES_AGGRESSIVE</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.1</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>TARGETED_DEVICE_FAMILY</key>
+				<string>1,2</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5AE5E1F8199F12E9007CDA0D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5AE5E1F9199F12E9007CDA0D</string>
+				<string>5AE5E1FA199F12E9007CDA0D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5AE5E1F9199F12E9007CDA0D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7813ECD9320147EBA25ED9F1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Voloe/Voloe-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Voloe/Voloe-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5AE5E1FA199F12E9007CDA0D</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>7813ECD9320147EBA25ED9F1</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Voloe/Voloe-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Voloe/Voloe-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5AE5E1FB199F12E9007CDA0D</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>5AE5E1FC199F12E9007CDA0D</string>
+				<string>5AE5E1FD199F12E9007CDA0D</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>5AE5E1FC199F12E9007CDA0D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Voloe/Voloe-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>VoloeTests/VoloeTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>5AE5E1FD199F12E9007CDA0D</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Voloe/Voloe-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>VoloeTests/VoloeTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>5AE5E1FE199F1463007CDA0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>MainViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E1FF199F1463007CDA0D</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>MainViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E200199F1463007CDA0D</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5AE5E1FF199F1463007CDA0D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>5AE5E201199F1468007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>5AE5E1FE199F1463007CDA0D</string>
+				<string>5AE5E1FF199F1463007CDA0D</string>
+				<string>5A3A9B17199F36600038B04B</string>
+				<string>5A3A9B18199F36600038B04B</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>5AE5E202199F1472007CDA0D</key>
+		<dict>
+			<key>children</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Models</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>6161076A6FE142698E941D6C</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>7813ECD9320147EBA25ED9F1</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Voloe.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-Voloe.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>79A9C2F86C974FD28A0C39BA</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-Voloe-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>F1E4C76309824F74A3F2D8E2</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-Voloe.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>5AE5E1BB199F12E8007CDA0D</string>
+</dict>
+</plist>
