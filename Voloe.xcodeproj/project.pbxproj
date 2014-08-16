@@ -15,7 +15,6 @@
 		5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */; };
 		5AE5E1DA199F12E9007CDA0D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */; };
 		5AE5E1DD199F12E9007CDA0D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1DB199F12E9007CDA0D /* Main_iPad.storyboard */; };
-		5AE5E1E0199F12E9007CDA0D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1DF199F12E9007CDA0D /* ViewController.m */; };
 		5AE5E1E2199F12E9007CDA0D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1E1199F12E9007CDA0D /* Images.xcassets */; };
 		5AE5E1E9199F12E9007CDA0D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1E8199F12E9007CDA0D /* XCTest.framework */; };
 		5AE5E1EA199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
@@ -47,8 +46,6 @@
 		5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5AE5E1D9199F12E9007CDA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5AE5E1DC199F12E9007CDA0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		5AE5E1DE199F12E9007CDA0D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5AE5E1DF199F12E9007CDA0D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5AE5E1E1199F12E9007CDA0D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5AE5E1E7199F12E9007CDA0D /* VoloeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VoloeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE5E1E8199F12E9007CDA0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -118,8 +115,6 @@
 				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
 				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
 				5AE5E1DB199F12E9007CDA0D /* Main_iPad.storyboard */,
-				5AE5E1DE199F12E9007CDA0D /* ViewController.h */,
-				5AE5E1DF199F12E9007CDA0D /* ViewController.m */,
 				5AE5E1E1199F12E9007CDA0D /* Images.xcassets */,
 				5AE5E1CD199F12E9007CDA0D /* Supporting Files */,
 			);
@@ -253,7 +248,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AE5E1E0199F12E9007CDA0D /* ViewController.m in Sources */,
 				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 			);
