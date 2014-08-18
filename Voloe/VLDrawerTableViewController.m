@@ -7,31 +7,48 @@
 //
 
 #import "VLDrawerTableViewController.h"
+#import "UIViewController+MMDrawerController.h"
 
-@interface VLDrawerTableViewController ()
+typedef NS_ENUM(NSInteger, VLDrawerSection) {
+    VLDrawerSectionNavigationItems,
+    VLDrawerSectionTrending,
+    VLDrawerSectionHelpAndSettings
+};
+
+@interface VLDrawerTableViewController () {
+    NSArray *_trending;
+    NSArray *_navigationItems;
+    NSArray *_helpAndSettings;
+}
 
 @end
 
 @implementation VLDrawerTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    _trending        = [NSArray arrayWithObjects:@"Trending Goals",
+                                                 @"Trending Users", nil];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    _navigationItems = [NSArray arrayWithObjects:@"Contest & Events",
+                                                 @"Guide",
+                                                 @"Your Profile",
+                                                 @"Lounge",
+                                                 @"Manage List",
+                                                 @"Notifications",
+                                                 @"Friends",
+                                                 @"Followers",
+                                                 @"Messages", nil];
+    
+    _helpAndSettings = [NSArray arrayWithObjects:@"Settings",
+                                                 @"Support",
+                                                 @"Terms of Use",
+                                                 @"Privacy Policy",
+                                                 @"Log Out", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,28 +61,93 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    NSInteger rows = 0;
+    switch (section) {
+        case VLDrawerSectionNavigationItems:
+            rows = [_navigationItems count];
+            break;
+        case VLDrawerSectionTrending:
+            rows = [_trending count];
+            break;
+        case VLDrawerSectionHelpAndSettings:
+            rows = [_helpAndSettings count];
+            break;
+    }
+    return rows;
 }
 
-/*
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    NSString *title = nil;
+    switch (section) {
+        case VLDrawerSectionNavigationItems:
+            break;
+        case VLDrawerSectionTrending:
+            title = @"Trending";
+            break;
+        case VLDrawerSectionHelpAndSettings:
+            title = @"Help & Settings";
+            break;
+    }
+    return title;
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DrawerCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    
+    NSString *title;
+    
+    switch ([indexPath section]) {
+        case VLDrawerSectionNavigationItems:
+            title = [_navigationItems objectAtIndex:[indexPath row]];
+            break;
+        case VLDrawerSectionTrending:
+            title = [_trending objectAtIndex:[indexPath row]];
+            break;
+        case VLDrawerSectionHelpAndSettings:
+            title = [_helpAndSettings objectAtIndex:[indexPath row]];
+            break;
+    }
+
+    [[cell textLabel] setText:title];
     
     return cell;
 }
-*/
+
+
+#pragma mark - TableViewDelegate methods
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    UINavigationController *newCenter = [storyboard instantiateViewControllerWithIdentifier:@"ProfileNaveController"];
+
+    switch ([indexPath section]) {
+        case VLDrawerSectionNavigationItems:
+            switch ([indexPath row]) {
+                case 2:
+                    [[self mm_drawerController] setCenterViewController:newCenter];
+                    break;
+                default:
+                    break;
+            }
+            break;
+        case VLDrawerSectionTrending:
+            break;
+        case VLDrawerSectionHelpAndSettings:
+            break;
+    }
+
+    
+}
 
 /*
 // Override to support conditional editing of the table view.
