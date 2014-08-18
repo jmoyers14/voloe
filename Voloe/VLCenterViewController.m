@@ -1,18 +1,18 @@
 //
-//  LoungeViewController.m
+//  VLCenterViewController.m
 //  Voloe
 //
-//  Created by Jeremy Moyers on 8/15/14.
+//  Created by Jeremy Moyers on 8/16/14.
 //  Copyright (c) 2014 Jeremy Moyers. All rights reserved.
 //
 
-#import "LoungeViewController.h"
+#import "VLCenterViewController.h"
 
-@interface LoungeViewController ()
+@interface VLCenterViewController ()
 
 @end
 
-@implementation LoungeViewController
+@implementation VLCenterViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

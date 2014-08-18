@@ -7,12 +7,38 @@
 //
 
 #import "AppDelegate.h"
+#import "MMDrawerController.h"
+
+
+@interface AppDelegate ()
+@property (nonatomic, strong) MMDrawerController *drawerController;
+@end
 
 @implementation AppDelegate
 
+- (BOOL) application:(UIApplication *)application willFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+
+    UINavigationController *centerController = [storyboard instantiateViewControllerWithIdentifier:@"CenterNavController"];
+    
+    UINavigationController *rightController = [storyboard instantiateViewControllerWithIdentifier:@"RightNavController"];
+    
+    self.drawerController = [[MMDrawerController alloc] initWithCenterViewController:centerController rightDrawerViewController:rightController];
+    
+    [[self drawerController] setMaximumRightDrawerWidth:200.0];
+    [[self drawerController] setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
+    [[self drawerController] setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    
+    
+    return YES;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[self window] setRootViewController:[self drawerController]];
+    [[self window] makeKeyAndVisible];
     return YES;
 }
 							
