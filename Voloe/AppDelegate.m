@@ -20,7 +20,7 @@
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
 
-    UINavigationController *centerController = [storyboard instantiateViewControllerWithIdentifier:@"CenterNavController"];
+    UINavigationController *centerController = [storyboard instantiateViewControllerWithIdentifier:@"LoungeNavController"];
     
     UINavigationController *rightController = [storyboard instantiateViewControllerWithIdentifier:@"RightNavController"];
     

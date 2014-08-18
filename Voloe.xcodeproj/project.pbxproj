@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		391D0C503C964F22B8E573C7 /* libPods-Voloe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */; };
 		5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */; };
-		5AAC8302199F4AB3002BFCEE /* VLCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AAC8301199F4AB3002BFCEE /* VLCenterViewController.m */; };
 		5AE5E1C7199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
 		5AE5E1C9199F12E9007CDA0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */; };
 		5AE5E1CB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
@@ -38,8 +37,6 @@
 /* Begin PBXFileReference section */
 		5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDrawerTableViewController.h; sourceTree = "<group>"; };
 		5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDrawerTableViewController.m; sourceTree = "<group>"; };
-		5AAC8300199F4AB3002BFCEE /* VLCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLCenterViewController.h; sourceTree = "<group>"; };
-		5AAC8301199F4AB3002BFCEE /* VLCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLCenterViewController.m; sourceTree = "<group>"; };
 		5AE5E1C3199F12E9007CDA0D /* Voloe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voloe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE5E1C6199F12E9007CDA0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,8 +161,6 @@
 		5AE5E201199F1468007CDA0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AAC8300199F4AB3002BFCEE /* VLCenterViewController.h */,
-				5AAC8301199F4AB3002BFCEE /* VLCenterViewController.m */,
 				5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */,
 				5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */,
 			);
@@ -312,7 +307,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
-				5AAC8302199F4AB3002BFCEE /* VLCenterViewController.m in Sources */,
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 			);
