@@ -241,6 +241,7 @@
 		5AE5E1CC199F12E9007CDA0D /* Voloe */ = {
 			isa = PBXGroup;
 			children = (
+				99ABEDA119A4065D00415AEA /* Images */,
 				5A41A6EE19A2B10900433337 /* Views */,
 				5AE5E1D5199F12E9007CDA0D /* AppDelegate.h */,
 				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
@@ -300,6 +301,21 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		99ABEDA119A4065D00415AEA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				99ABEDA219A4066D00415AEA /* Icons */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		99ABEDA219A4066D00415AEA /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
