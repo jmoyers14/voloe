@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "MMDrawerController.h"
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
 
 @interface AppDelegate ()
 @property (nonatomic, strong) MMDrawerController *drawerController;
@@ -37,6 +39,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                UIColorFromRGB(0x00acbf),NSForegroundColorAttributeName,
+                                nil];
+
+    [[UINavigationBar appearance] setTitleTextAttributes:attributes];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes
+                                                forState:UIControlStateNormal];
+    
     [[self window] setRootViewController:[self drawerController]];
     [[self window] makeKeyAndVisible];
     return YES;

@@ -8,6 +8,9 @@
 
 #import "VLDrawerTableViewController.h"
 #import "UIViewController+MMDrawerController.h"
+#import "VLDrawerTableViewCell.h"
+
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 typedef NS_ENUM(NSInteger, VLDrawerSection) {
     VLDrawerSectionNavigationItems,
@@ -193,6 +196,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
     return rows;
 }
 
+//set title for table view headers
 - (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     NSString *title = nil;
@@ -209,10 +213,17 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
     return title;
 }
 
+//set text and background color of table headers
+- (void) tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
+    [view setTintColor:UIColorFromRGB(0x3d454f)];
+    [[((UITableViewHeaderFooterView *)view) textLabel] setTextColor:UIColorFromRGB(0xDDEEFF)];
+}
 
+
+//set title and icon of each menu item in drawer
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DrawerCell" forIndexPath:indexPath];
+    VLDrawerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DrawerCell" forIndexPath:indexPath];
     
     
     NSString *title;
@@ -229,14 +240,14 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
             break;
     }
 
-    [[cell textLabel] setText:title];
+    [[cell titleLabel] setText:title];
     
     return cell;
 }
 
 
 #pragma mark - TableViewDelegate methods
-
+//call appropriate action for each menu item in the navigation drawer. changes center view controller
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     UINavigationController *vc;
@@ -268,5 +279,8 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 
     
 }
+
+
+
 
 @end

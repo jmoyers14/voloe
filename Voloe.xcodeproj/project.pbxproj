@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		391D0C503C964F22B8E573C7 /* libPods-Voloe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */; };
 		5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */; };
+		5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */; };
+		5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CCD19A2B81D003AA4EF /* VLGuideTableViewController.m */; };
+		5A6F6CD119A2B82A003AA4EF /* VLProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */; };
+		5A6F6CD419A2B838003AA4EF /* VLManageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CD319A2B838003AA4EF /* VLManageTableViewController.m */; };
+		5A6F6CD719A2B845003AA4EF /* VLNotificationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CD619A2B845003AA4EF /* VLNotificationTableViewController.m */; };
+		5A6F6CDA19A2B855003AA4EF /* VLFriendsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CD919A2B855003AA4EF /* VLFriendsTableViewController.m */; };
+		5A6F6CDD19A2B864003AA4EF /* VLMessagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CDC19A2B864003AA4EF /* VLMessagesTableViewController.m */; };
+		5A6F6CE019A2B875003AA4EF /* VLGoalsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CDF19A2B875003AA4EF /* VLGoalsTableViewController.m */; };
+		5A6F6CE319A2B891003AA4EF /* VLUsersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CE219A2B891003AA4EF /* VLUsersTableViewController.m */; };
+		5A6F6CE919A2B8C2003AA4EF /* VLSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CE819A2B8C2003AA4EF /* VLSettingsTableViewController.m */; };
+		5A6F6CEC19A2B8CD003AA4EF /* VLSupportTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CEB19A2B8CD003AA4EF /* VLSupportTableViewController.m */; };
+		5A6F6CF219A2B8FE003AA4EF /* VLPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF119A2B8FE003AA4EF /* VLPrivacyViewController.m */; };
+		5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */; };
+		5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */; };
+		5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */; };
+		5AACFBF819A2C7BE003D9504 /* VLDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */; };
 		5AE5E1C7199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
 		5AE5E1C9199F12E9007CDA0D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */; };
 		5AE5E1CB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
@@ -37,6 +53,38 @@
 /* Begin PBXFileReference section */
 		5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDrawerTableViewController.h; sourceTree = "<group>"; };
 		5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDrawerTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CC319A2B2A2003AA4EF /* VLLoungeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLLoungeTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLLoungeTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CCC19A2B81D003AA4EF /* VLGuideTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLGuideTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CCD19A2B81D003AA4EF /* VLGuideTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGuideTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CCF19A2B82A003AA4EF /* VLProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLProfileTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLProfileTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CD219A2B838003AA4EF /* VLManageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLManageTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CD319A2B838003AA4EF /* VLManageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLManageTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CD519A2B845003AA4EF /* VLNotificationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLNotificationTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CD619A2B845003AA4EF /* VLNotificationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLNotificationTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CD819A2B855003AA4EF /* VLFriendsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLFriendsTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CD919A2B855003AA4EF /* VLFriendsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLFriendsTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CDB19A2B864003AA4EF /* VLMessagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLMessagesTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CDC19A2B864003AA4EF /* VLMessagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLMessagesTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CDE19A2B875003AA4EF /* VLGoalsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLGoalsTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CDF19A2B875003AA4EF /* VLGoalsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGoalsTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CE119A2B891003AA4EF /* VLUsersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUsersTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CE219A2B891003AA4EF /* VLUsersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUsersTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CE719A2B8C2003AA4EF /* VLSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLSettingsTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CE819A2B8C2003AA4EF /* VLSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLSettingsTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CEA19A2B8CD003AA4EF /* VLSupportTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLSupportTableViewController.h; sourceTree = "<group>"; };
+		5A6F6CEB19A2B8CD003AA4EF /* VLSupportTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLSupportTableViewController.m; sourceTree = "<group>"; };
+		5A6F6CF019A2B8FE003AA4EF /* VLPrivacyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLPrivacyViewController.h; sourceTree = "<group>"; };
+		5A6F6CF119A2B8FE003AA4EF /* VLPrivacyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLPrivacyViewController.m; sourceTree = "<group>"; };
+		5A6F6CF319A2B90F003AA4EF /* VLTermsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLTermsViewController.h; sourceTree = "<group>"; };
+		5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLTermsViewController.m; sourceTree = "<group>"; };
+		5A6F6CF619A2B97C003AA4EF /* VLCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLCenterViewController.h; sourceTree = "<group>"; };
+		5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLCenterViewController.m; sourceTree = "<group>"; };
+		5AACFBF319A2BE6C003D9504 /* VLFollowersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLFollowersTableViewController.h; sourceTree = "<group>"; };
+		5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLFollowersTableViewController.m; sourceTree = "<group>"; };
+		5AACFBF619A2C7BE003D9504 /* VLDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDrawerTableViewCell.h; sourceTree = "<group>"; };
+		5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDrawerTableViewCell.m; sourceTree = "<group>"; };
 		5AE5E1C3199F12E9007CDA0D /* Voloe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voloe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE5E1C6199F12E9007CDA0D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5AE5E1C8199F12E9007CDA0D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +131,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A41A6EC19A2B0DC00433337 /* Catagories */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F6CF619A2B97C003AA4EF /* VLCenterViewController.h */,
+				5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */,
+			);
+			name = Catagories;
+			sourceTree = "<group>";
+		};
+		5A41A6ED19A2B0EC00433337 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5AACFBF619A2C7BE003D9504 /* VLDrawerTableViewCell.h */,
+				5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		5A41A6EE19A2B10900433337 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		5A6F6CE419A2B899003AA4EF /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F6CC319A2B2A2003AA4EF /* VLLoungeTableViewController.h */,
+				5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */,
+				5A6F6CCC19A2B81D003AA4EF /* VLGuideTableViewController.h */,
+				5A6F6CCD19A2B81D003AA4EF /* VLGuideTableViewController.m */,
+				5A6F6CCF19A2B82A003AA4EF /* VLProfileTableViewController.h */,
+				5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */,
+				5A6F6CD219A2B838003AA4EF /* VLManageTableViewController.h */,
+				5A6F6CD319A2B838003AA4EF /* VLManageTableViewController.m */,
+				5A6F6CD519A2B845003AA4EF /* VLNotificationTableViewController.h */,
+				5A6F6CD619A2B845003AA4EF /* VLNotificationTableViewController.m */,
+				5A6F6CD819A2B855003AA4EF /* VLFriendsTableViewController.h */,
+				5A6F6CD919A2B855003AA4EF /* VLFriendsTableViewController.m */,
+				5A6F6CDB19A2B864003AA4EF /* VLMessagesTableViewController.h */,
+				5A6F6CDC19A2B864003AA4EF /* VLMessagesTableViewController.m */,
+				5AACFBF319A2BE6C003D9504 /* VLFollowersTableViewController.h */,
+				5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
+		5A6F6CE519A2B8A1003AA4EF /* Trending */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F6CDE19A2B875003AA4EF /* VLGoalsTableViewController.h */,
+				5A6F6CDF19A2B875003AA4EF /* VLGoalsTableViewController.m */,
+				5A6F6CE119A2B891003AA4EF /* VLUsersTableViewController.h */,
+				5A6F6CE219A2B891003AA4EF /* VLUsersTableViewController.m */,
+			);
+			name = Trending;
+			sourceTree = "<group>";
+		};
+		5A6F6CE619A2B8A6003AA4EF /* HelpSettings */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F6CE719A2B8C2003AA4EF /* VLSettingsTableViewController.h */,
+				5A6F6CE819A2B8C2003AA4EF /* VLSettingsTableViewController.m */,
+				5A6F6CEA19A2B8CD003AA4EF /* VLSupportTableViewController.h */,
+				5A6F6CEB19A2B8CD003AA4EF /* VLSupportTableViewController.m */,
+				5A6F6CF019A2B8FE003AA4EF /* VLPrivacyViewController.h */,
+				5A6F6CF119A2B8FE003AA4EF /* VLPrivacyViewController.m */,
+				5A6F6CF319A2B90F003AA4EF /* VLTermsViewController.h */,
+				5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */,
+			);
+			name = HelpSettings;
+			sourceTree = "<group>";
+		};
 		5AE5E1BA199F12E8007CDA0D = {
 			isa = PBXGroup;
 			children = (
@@ -118,11 +241,12 @@
 		5AE5E1CC199F12E9007CDA0D /* Voloe */ = {
 			isa = PBXGroup;
 			children = (
+				5A41A6EE19A2B10900433337 /* Views */,
 				5AE5E1D5199F12E9007CDA0D /* AppDelegate.h */,
 				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
 				5AE5E202199F1472007CDA0D /* Models */,
 				5AE5E201199F1468007CDA0D /* Controllers */,
-				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
+				5A41A6EC19A2B0DC00433337 /* Catagories */,
 				5AE5E1E1199F12E9007CDA0D /* Images.xcassets */,
 				5AE5E1CD199F12E9007CDA0D /* Supporting Files */,
 			);
@@ -161,6 +285,10 @@
 		5AE5E201199F1468007CDA0D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5A6F6CE619A2B8A6003AA4EF /* HelpSettings */,
+				5A6F6CE519A2B8A1003AA4EF /* Trending */,
+				5A6F6CE419A2B899003AA4EF /* Navigation */,
+				5A41A6ED19A2B0EC00433337 /* Cells */,
 				5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */,
 				5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */,
 			);
@@ -307,8 +435,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
+				5A6F6CD119A2B82A003AA4EF /* VLProfileTableViewController.m in Sources */,
+				5A6F6CF219A2B8FE003AA4EF /* VLPrivacyViewController.m in Sources */,
+				5A6F6CE319A2B891003AA4EF /* VLUsersTableViewController.m in Sources */,
+				5A6F6CDA19A2B855003AA4EF /* VLFriendsTableViewController.m in Sources */,
+				5A6F6CE919A2B8C2003AA4EF /* VLSettingsTableViewController.m in Sources */,
+				5A6F6CDD19A2B864003AA4EF /* VLMessagesTableViewController.m in Sources */,
+				5AACFBF819A2C7BE003D9504 /* VLDrawerTableViewCell.m in Sources */,
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
+				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
+				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
+				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
+				5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */,
+				5A6F6CE019A2B875003AA4EF /* VLGoalsTableViewController.m in Sources */,
+				5A6F6CEC19A2B8CD003AA4EF /* VLSupportTableViewController.m in Sources */,
+				5A6F6CD719A2B845003AA4EF /* VLNotificationTableViewController.m in Sources */,
+				5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */,
+				5A6F6CD419A2B838003AA4EF /* VLManageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

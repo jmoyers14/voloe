@@ -12,14 +12,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.36470588240000001" green="0.39607843139999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2" customClass="VLDrawerTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ikl-Tw-ZD2" id="OaI-eV-MRm">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-94-WMU">
+                                            <rect key="frame" x="10" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" red="0.693709562" green="1" blue="0.68189069030000005" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="7Q4-nf-gAV"/>
+                                                <constraint firstAttribute="width" constant="30" id="uUG-5D-X5V"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFY-VF-ENv">
+                                            <rect key="frame" x="50" y="11" width="225" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="225" id="QQu-P1-oBD"/>
+                                                <constraint firstAttribute="height" constant="21" id="eVI-6M-ST2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.8666666666666667" green="0.93333333333333335" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="rFY-VF-ENv" firstAttribute="leading" secondItem="jaP-94-WMU" secondAttribute="trailing" constant="10" id="9bL-F5-U4Y"/>
+                                        <constraint firstItem="jaP-94-WMU" firstAttribute="leading" secondItem="OaI-eV-MRm" secondAttribute="leading" constant="10" id="FYI-dh-J9F"/>
+                                        <constraint firstAttribute="centerY" secondItem="jaP-94-WMU" secondAttribute="centerY" id="gO6-pZ-kG6"/>
+                                        <constraint firstItem="rFY-VF-ENv" firstAttribute="top" secondItem="OaI-eV-MRm" secondAttribute="top" constant="11" id="sdN-xp-UQD"/>
+                                        <constraint firstItem="jaP-94-WMU" firstAttribute="top" secondItem="OaI-eV-MRm" secondAttribute="top" constant="7" id="syK-Sy-wVq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.36470588235294116" green="0.396078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="titleLabel" destination="rFY-VF-ENv" id="LRT-g2-5MR"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -67,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="1381" y="-654"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Settings Table View Controller - Root View Controller-->
         <scene sceneID="DD0-d3-vZu">
             <objects>
-                <tableViewController id="kGV-4L-xbf" sceneMemberID="viewController">
+                <tableViewController id="kGV-4L-xbf" customClass="VLSettingsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HnD-or-ALE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,16 +124,22 @@
                             <outlet property="delegate" destination="kGV-4L-xbf" id="ITu-bt-sma"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Ncn-hG-cXx"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Ncn-hG-cXx">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="rGl-Vd-mft">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="kGV-4L-xbf" id="5eQ-fm-pnY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9eM-RI-nLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2506" y="-639"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Support Table View Controller - Root View Controller-->
         <scene sceneID="6v2-8D-0Qe">
             <objects>
-                <tableViewController id="PLx-MS-Ltq" sceneMemberID="viewController">
+                <tableViewController id="PLx-MS-Ltq" customClass="VLSupportTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="L7Y-Vi-d1C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,69 +159,17 @@
                             <outlet property="delegate" destination="PLx-MS-Ltq" id="ku1-r2-fAf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="mmt-dx-mpu"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="mmt-dx-mpu">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="kfv-pB-ddt">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="PLx-MS-Ltq" id="c1a-CD-FOy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z44-DJ-MgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2506" y="53"/>
-        </scene>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="65c-Ta-3WH">
-            <objects>
-                <tableViewController id="yEB-L8-HXN" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YOV-MK-uNn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="3uE-pr-3ei">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3uE-pr-3ei" id="wUc-F7-ya0">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="yEB-L8-HXN" id="OLd-6O-82K"/>
-                            <outlet property="delegate" destination="yEB-L8-HXN" id="Nkc-GN-Y8L"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="lB7-5r-70F"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tk7-Sm-iNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2510" y="781"/>
-        </scene>
-        <!--Table View Controller - Root View Controller-->
-        <scene sceneID="K4S-6p-8q9">
-            <objects>
-                <tableViewController id="XXq-Vc-STv" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="v2Q-RD-rqJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hhu-8s-0ch">
-                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hhu-8s-0ch" id="rK5-8Q-AF4">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="XXq-Vc-STv" id="i15-gT-Ev2"/>
-                            <outlet property="delegate" destination="XXq-Vc-STv" id="77t-yM-DfO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Hmp-Fk-nK5"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dP4-sO-vr0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2546" y="1541"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q10-ag-Wu5">
@@ -191,12 +179,37 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="XXq-Vc-STv" kind="relationship" relationship="rootViewController" id="wCp-e2-aj1"/>
+                        <segue destination="cjB-xI-HSU" kind="relationship" relationship="rootViewController" id="Zoa-M2-h4u"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MHh-Nu-lQ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2014" y="1541"/>
+        </scene>
+        <!--Privacy View Controller-->
+        <scene sceneID="Rdd-58-SLx">
+            <objects>
+                <viewController id="cjB-xI-HSU" customClass="VLPrivacyViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hIb-ow-jxW"/>
+                        <viewControllerLayoutGuide type="bottom" id="7XO-dk-awp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yB9-J6-eAB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RG2-Eq-gJT">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="7c2-zx-qUm">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="cjB-xI-HSU" id="gSj-Wn-r81"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ST-Ox-6nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2531" y="1554"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GAb-yq-DeH">
@@ -206,12 +219,37 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="yEB-L8-HXN" kind="relationship" relationship="rootViewController" id="Ojt-qR-SIu"/>
+                        <segue destination="rwd-Tn-xjx" kind="relationship" relationship="rootViewController" id="tcn-na-jZr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lIW-rZ-2wb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1978" y="781"/>
+        </scene>
+        <!--Terms View Controller-->
+        <scene sceneID="wOp-bg-tCC">
+            <objects>
+                <viewController id="rwd-Tn-xjx" customClass="VLTermsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vKA-G7-c00"/>
+                        <viewControllerLayoutGuide type="bottom" id="W4S-9u-1C1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="V4e-rB-VQr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C2v-7y-oIi">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="33D-HC-rpF">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="rwd-Tn-xjx" id="nzE-mf-OB2"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gO7-dT-NXU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2491" y="777"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nbG-2k-JzR">
@@ -243,10 +281,10 @@
             </objects>
             <point key="canvasLocation" x="1970" y="-639"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Guide Table View Controller - Root View Controller-->
         <scene sceneID="sNP-fP-F1B">
             <objects>
-                <tableViewController id="YEa-TP-Edt" sceneMemberID="viewController">
+                <tableViewController id="YEa-TP-Edt" customClass="VLGuideTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="t0N-RE-jeU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -266,16 +304,22 @@
                             <outlet property="delegate" destination="YEa-TP-Edt" id="7qF-1D-KS6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="sL3-Po-Spd"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="sL3-Po-Spd">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Wuv-zl-Ir3">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="YEa-TP-Edt" id="BN3-nb-mwn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nb7-Hx-lyR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1389" y="61"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Profile Table View Controller - Root View Controller-->
         <scene sceneID="uta-5W-oIY">
             <objects>
-                <tableViewController id="A87-D6-28f" sceneMemberID="viewController">
+                <tableViewController id="A87-D6-28f" customClass="VLProfileTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sr4-Sr-Sec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -295,16 +339,22 @@
                             <outlet property="delegate" destination="A87-D6-28f" id="BU1-Dd-RdI"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="VAU-DC-6G9"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="VAU-DC-6G9">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="xhV-gP-8wi">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="A87-D6-28f" id="w1w-ic-KzM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHa-df-kfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1391" y="777"/>
         </scene>
-        <!--Table View Controller - Lounge-->
+        <!--Lounge Table View Controller - Lounge-->
         <scene sceneID="hvs-4u-8el">
             <objects>
-                <tableViewController id="PCn-pw-tCS" sceneMemberID="viewController">
+                <tableViewController id="PCn-pw-tCS" customClass="VLLoungeTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="2Tr-Ev-eeU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,16 +374,22 @@
                             <outlet property="delegate" destination="PCn-pw-tCS" id="b1d-Mi-X0V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lounge" id="ObM-X2-iBq"/>
+                    <navigationItem key="navigationItem" title="Lounge" id="ObM-X2-iBq">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="WE8-Xo-Kdh">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="PCn-pw-tCS" id="OUX-Te-ZVm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AMa-fE-8gi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1391" y="1461"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Manage Table View Controller - Root View Controller-->
         <scene sceneID="F9Z-Bm-JWh">
             <objects>
-                <tableViewController id="ifS-JE-LV6" sceneMemberID="viewController">
+                <tableViewController id="ifS-JE-LV6" customClass="VLManageTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gw7-Te-CMI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,16 +409,22 @@
                             <outlet property="delegate" destination="ifS-JE-LV6" id="y81-tA-kgk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Sny-RY-i8V"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Sny-RY-i8V">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="yAH-g2-RZf">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="ifS-JE-LV6" id="Zo6-ha-B7g"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TGq-IU-6l9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1381" y="2131"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Goals Table View Controller - Root View Controller-->
         <scene sceneID="rWL-QM-1Yx">
             <objects>
-                <tableViewController id="4lk-gl-kcy" sceneMemberID="viewController">
+                <tableViewController id="4lk-gl-kcy" customClass="VLGoalsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Grb-Mj-Y5A">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,7 +444,13 @@
                             <outlet property="delegate" destination="4lk-gl-kcy" id="zb7-69-j1f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="0BS-vq-pt6"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="0BS-vq-pt6">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="5kS-Fq-mcZ">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="4lk-gl-kcy" id="9M4-w3-ihx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4c-GV-2hA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -418,10 +486,10 @@
             </objects>
             <point key="canvasLocation" x="847" y="2131"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Users Table View Controller - Root View Controller-->
         <scene sceneID="ggX-QJ-0CD">
             <objects>
-                <tableViewController id="BB0-d3-IMj" sceneMemberID="viewController">
+                <tableViewController id="BB0-d3-IMj" customClass="VLUsersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Xen-LD-CW8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -441,7 +509,13 @@
                             <outlet property="delegate" destination="BB0-d3-IMj" id="Qlq-aN-IC9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="ovB-3l-36t"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="ovB-3l-36t">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="cZ1-cP-V2x">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="BB0-d3-IMj" id="kEt-UD-9hE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4l-0l-ebz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -477,10 +551,10 @@
             </objects>
             <point key="canvasLocation" x="857" y="1461"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Notification Table View Controller - Root View Controller-->
         <scene sceneID="soJ-su-sCR">
             <objects>
-                <tableViewController id="pfI-A5-pHg" sceneMemberID="viewController">
+                <tableViewController id="pfI-A5-pHg" customClass="VLNotificationTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="XBs-NO-55c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -500,7 +574,13 @@
                             <outlet property="delegate" destination="pfI-A5-pHg" id="s1W-cs-t98"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="RbF-bZ-a7v"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="RbF-bZ-a7v">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="fux-Ew-gQg">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="pfI-A5-pHg" id="XlN-uR-gNO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mL0-ag-zcx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -566,10 +646,10 @@
             </objects>
             <point key="canvasLocation" x="17" y="-166"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Friends Table View Controller - Root View Controller-->
         <scene sceneID="HGH-XI-pkN">
             <objects>
-                <tableViewController id="vA3-ig-CnD" sceneMemberID="viewController">
+                <tableViewController id="vA3-ig-CnD" customClass="VLFriendsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Psz-gq-0t6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -589,16 +669,22 @@
                             <outlet property="delegate" destination="vA3-ig-CnD" id="4Fw-gY-aWH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hHy-Rh-DLr"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="hHy-Rh-DLr">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Ekv-Rh-KSC">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="vA3-ig-CnD" id="VKJ-CD-dnc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRi-Yp-pgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="1491"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Followers Table View Controller - Root View Controller-->
         <scene sceneID="eEi-ru-bKo">
             <objects>
-                <tableViewController id="QUk-xE-WXd" sceneMemberID="viewController">
+                <tableViewController id="QUk-xE-WXd" customClass="VLFollowersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Qb7-IK-RwY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -618,16 +704,22 @@
                             <outlet property="delegate" destination="QUk-xE-WXd" id="KvY-u0-QaN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="1Bm-KM-CIK"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="1Bm-KM-CIK">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="tPd-uN-Hf1">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="QUk-xE-WXd" id="BRI-9J-LUg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GCe-Xh-bse" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="423" y="2157"/>
         </scene>
-        <!--Table View Controller - Root View Controller-->
+        <!--Messages Table View Controller - Root View Controller-->
         <scene sceneID="zHy-D5-AgL">
             <objects>
-                <tableViewController id="DcG-od-QNT" sceneMemberID="viewController">
+                <tableViewController id="DcG-od-QNT" customClass="VLMessagesTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bsX-4y-OWr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -647,7 +739,13 @@
                             <outlet property="delegate" destination="DcG-od-QNT" id="855-6q-JgV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nIx-Pp-kSh"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="nIx-Pp-kSh">
+                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Ha5-Y4-D5o">
+                            <connections>
+                                <action selector="rightDrawerButtonPress:" destination="DcG-od-QNT" id="9h0-JO-NQx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNF-H8-qcQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
