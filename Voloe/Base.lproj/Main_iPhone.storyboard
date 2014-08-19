@@ -12,9 +12,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <color key="separatorColor" red="0.36470588240000001" green="0.39607843139999999" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.49019607840000001" green="0.52156862749999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="separatorColor" red="0.49019607843137253" green="0.52156862745098043" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2" customClass="VLDrawerTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2" customClass="VLDrawerTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ikl-Tw-ZD2" id="OaI-eV-MRm">
@@ -50,7 +51,7 @@
                                         <constraint firstItem="jaP-94-WMU" firstAttribute="top" secondItem="OaI-eV-MRm" secondAttribute="top" constant="7" id="syK-Sy-wVq"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.36470588235294116" green="0.396078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.38419725529100529" green="0.396078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="titleLabel" destination="rFY-VF-ENv" id="LRT-g2-5MR"/>
                                 </connections>

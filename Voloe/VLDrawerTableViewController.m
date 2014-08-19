@@ -225,6 +225,8 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 {
     VLDrawerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DrawerCell" forIndexPath:indexPath];
     
+
+    
     
     NSString *title;
     
@@ -247,7 +249,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 
 
 #pragma mark - TableViewDelegate methods
-//call appropriate action for each menu item in the navigation drawer. changes center view controller
+//call action for each menu item in the navigation drawer. changes center view controller
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
     UINavigationController *vc;
@@ -277,6 +279,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
         [[self mm_drawerController] setCenterViewController:vc];
     }
 
+    [self.mm_drawerController toggleDrawerSide:MMDrawerSideRight animated:YES completion:nil];
     
 }
 
