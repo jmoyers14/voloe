@@ -15,7 +15,7 @@
                         <color key="tintColor" red="0.49019607840000001" green="0.52156862749999999" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="0.49019607843137253" green="0.52156862745098043" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2" customClass="VLDrawerTableViewCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DrawerCell" id="Ikl-Tw-ZD2" customClass="VLDrawerTableViewCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ikl-Tw-ZD2" id="OaI-eV-MRm">
@@ -25,7 +25,6 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jaP-94-WMU">
                                             <rect key="frame" x="10" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="backgroundColor" red="0.693709562" green="1" blue="0.68189069030000005" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="P8l-3f-91S"/>
                                                 <constraint firstAttribute="height" constant="30" id="Xdr-Dh-ZGr"/>
@@ -52,8 +51,10 @@
                                         <constraint firstItem="rFY-VF-ENv" firstAttribute="top" secondItem="OaI-eV-MRm" secondAttribute="top" constant="11" id="uOI-8r-FVz"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.38419725529100529" green="0.396078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.36470588235294116" green="0.396078431372549" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
+                                    <outlet property="icon" destination="jaP-94-WMU" id="9NP-Q0-sVJ"/>
                                     <outlet property="titleLabel" destination="rFY-VF-ENv" id="LRT-g2-5MR"/>
                                 </connections>
                             </tableViewCell>
@@ -204,7 +205,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">PLEASE NOTE THAT OUR PRIVACY POLICY HAS CHANGED EFFECTIVE: June 1, 2014
+                                <string key="text">PLEASE NOTE THAT OUR PRIVACY POLICY HAS CHANGED EFFECTIVE: June 1, 2014
 (as our Privacy Policy changes, archived versions will be available at www.voloe.com/privacy/archives)
 This "Privacy Policy" applies to the Website(s) controlled by Voloe, Inc. and/or its subsidiary and affiliated entities ("Voloe.com", "us", "we", or "our") where the Privacy Policy is posted. "Websites" include sites hosted by one or more web servers {however accessed and/or used, whether via personal computers, mobile devices or otherwise (collectively, "Computer")} and other interactive features, applications or downloads that are operated by us and that are available through, or interact with, Websites where this Privacy Policy is posted. Please read the following to learn more about our Privacy Policy, which includes compliance with California Privacy Rights (see also http://oag.ca.gov/privacy/online-privacy).
 
@@ -290,7 +291,7 @@ WHEN YOU ACCESS OUR WEBSITES, YOU AGREE TO THIS PRIVACY POLICY. IF YOU DO NOT AG
     The Websites are operated in the United States and intended for users located in the United States. If you are located in the European Union, Canada or elsewhere outside of the United States, please be aware that information we collect will be transferred to and processed and stored in the United States. By using the Websites or providing us with any information, you consent to this transfer and processing of your information in the United States.
     SOLE STATEMENT
     This Privacy Policy as posted is the sole statement of our privacy policy with respect to the Websites, and no summary, modification, restatement or other version thereof or other privacy statement or policy, in any form, is valid unless we post a new or revised policy to the Websites.
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -346,7 +347,7 @@ WHEN YOU ACCESS OUR WEBSITES, YOU AGREE TO THIS PRIVACY POLICY. IF YOU DO NOT AG
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">
+                                <string key="text">
 Terms of Use
 NOTE THAT OUR TERMS OF USE HAS CHANGED EFFECTIVE: June 1, 2014
 (as our TERMS OF USE changes, archived versions will be available at www.voloe.com/tos/archives)
@@ -440,7 +441,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
 
     The effective date of these Terms of Use is April 15, 2014. These Terms of Use were written in English (US). To the extent any translated version of these Terms of Use conflicts with the English version, the English version controls.
 
-</mutableString>
+</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>

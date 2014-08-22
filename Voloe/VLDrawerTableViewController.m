@@ -57,27 +57,29 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, assign) NSInteger index;
+@property (nonatomic, strong) NSString *imageName;
 @end
 
 @implementation _viewInfo
-@synthesize title = _title;
+@synthesize title      = _title;
 @synthesize identifier = _identifier;
-@synthesize index = _index;
-
+@synthesize index      = _index;
+@synthesize imageName  = _imageName;
 //designated initializer
-- (id) initWithTitle:(NSString *)title identifier:(NSString *)identifer index:(NSInteger)index {
+- (id) initWithTitle:(NSString *)title identifier:(NSString *)identifer imageName:(NSString *)name index:(NSInteger)index  {
     self = [super init];
     if (self) {
         [self setTitle:title];
         [self setIdentifier:identifer];
         [self setIndex:index];
+        [self setImageName:name];
     }
     return self;
 }
 
 - (id) init {
     //call designated initializer
-    return [self initWithTitle:nil identifier:nil index:0];
+    return [self initWithTitle:nil identifier:nil  imageName:nil index:0];
 }
 
 @end
@@ -98,6 +100,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
     
 }
 
+#pragma mark - Initialize view structures
 //fill data structres with information for each view in the navigation section
 - (void) initializeNavigationViewStructures {
     NSArray *navigationTitles = [NSArray arrayWithObjects:@"Contest & Events",
@@ -119,12 +122,24 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
                                       @"FriendsNavController",
                                       @"FollowersNavController",
                                       @"MessagesNavController",nil];
+    
+    NSArray *navigationIcons = [NSArray arrayWithObjects:@"contest-trophy",
+                                @"blue-guide",
+                                @"blue-user-profile",
+                                @"blue-lounge",
+                                @"blue-manage-list",
+                                @"blue-notifications",
+                                @"blue-friends",
+                                @"blue-follower",
+                                @"blue-messages", nil];
+    
     _navigationItems = [[NSMutableArray alloc] initWithCapacity:[navigationTitles count]];
     
     for (int i = 0; i < [navigationTitles count]; i++) {
         [_navigationItems addObject:[[_viewInfo alloc] initWithTitle:[navigationTitles objectAtIndex:i]
                                                           identifier:[navigationIdentifiers objectAtIndex:i]
-                                                               index:i]];
+                                                           imageName:[navigationIcons objectAtIndex:i]
+                                                              index:i]];
     }
 }
 
@@ -135,10 +150,15 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
     NSArray *trendingIdentifiers = [NSArray arrayWithObjects:@"GoalsNavController",
                                     @"UsersNavController", nil];
     
+    NSArray *trendingIcons = [NSArray arrayWithObjects:@"blue-trending-goals",
+                              @"blue-trending-users", nil];
+    
     _trending = [[NSMutableArray alloc] init];
+    
     for (int i = 0; i < [trendingTitles count]; i++) {
         [_trending addObject:[[_viewInfo alloc] initWithTitle:[trendingTitles objectAtIndex:i]
                                                    identifier:[trendingIdentifiers objectAtIndex:i]
+                                                    imageName:[trendingIcons objectAtIndex:i]
                                                         index:i]];
     }
 }
@@ -156,10 +176,19 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
                                                       @"TermsNavController",
                                                       @"PrivacyNavController",
                                                       @"LogOutController", nil];
+    
+    NSArray *helpIcons = [NSArray arrayWithObjects:@"edit",
+                          @"blue-support",
+                          @"blue-terms-of-use",
+                          @"blue-privacy",
+                          @"blue-log-out", nil];
     _helpAndSettings = [[NSMutableArray alloc] init];
+    
+    //initialize viewInfo objects
     for (int i = 0; i < [helpTitles count]; i++) {
         [_helpAndSettings addObject:[[_viewInfo alloc] initWithTitle:[helpTitles objectAtIndex:i]
                                                           identifier:[helpIdentifiers objectAtIndex:i]
+                                                           imageName:[helpIcons objectAtIndex:i]
                                                                index:i]];
     }
 }
@@ -225,25 +254,22 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 {
     VLDrawerTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"DrawerCell" forIndexPath:indexPath];
     
-
-    
-    
-    NSString *title;
+    _viewInfo *viewInfo = nil;
     
     switch ([indexPath section]) {
         case VLDrawerSectionNavigationItems:
-            title = [[_navigationItems objectAtIndex:[indexPath row]] title];
+            viewInfo = [_navigationItems objectAtIndex:[indexPath row]];
             break;
         case VLDrawerSectionTrending:
-            title = [[_trending objectAtIndex:[indexPath row]] title];
+            viewInfo = [_trending objectAtIndex:[indexPath row]];
             break;
         case VLDrawerSectionHelpAndSettings:
-            title = [[_helpAndSettings objectAtIndex:[indexPath row]] title];
+            viewInfo = [_helpAndSettings objectAtIndex:[indexPath row]];
             break;
     }
 
-    [[cell titleLabel] setText:title];
-    
+    [[cell titleLabel] setText:[viewInfo title]];
+    [[cell icon] setImage:[UIImage imageNamed:[viewInfo imageName]]];
     return cell;
 }
 
@@ -283,6 +309,15 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
     
 }
 
+- (void) tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    VLDrawerTableViewCell *cell = (VLDrawerTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell setBackgroundColor:UIColorFromRGB(0x222222)];
+}
+
+- (void) tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    VLDrawerTableViewCell *cell = (VLDrawerTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    [cell setBackgroundColor:UIColorFromRGB(0x5d656f)];
+}
 
 
 
