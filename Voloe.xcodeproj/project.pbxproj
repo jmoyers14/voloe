@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		391D0C503C964F22B8E573C7 /* libPods-Voloe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */; };
 		5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */; };
+		5A5740F119ABAC9600F4FC5C /* white-messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5740EF19ABAC9600F4FC5C /* white-messages.png */; };
+		5A5740F219ABAC9600F4FC5C /* blue-messages.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5740F019ABAC9600F4FC5C /* blue-messages.png */; };
+		5A5740F619ABBF3C00F4FC5C /* imageNotAvailable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5740F419ABBF3C00F4FC5C /* imageNotAvailable@2x.png */; };
+		5A5740F719ABBF3C00F4FC5C /* imageNotAvailable.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A5740F519ABBF3C00F4FC5C /* imageNotAvailable.png */; };
 		5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */; };
 		5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CCD19A2B81D003AA4EF /* VLGuideTableViewController.m */; };
 		5A6F6CD119A2B82A003AA4EF /* VLProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */; };
@@ -139,6 +143,7 @@
 		5A9DE71F19A7A46A00C89F23 /* white-user-profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE6AB19A7A46A00C89F23 /* white-user-profile@2x.png */; };
 		5A9DE72019A7A46A00C89F23 /* white-view.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE6AC19A7A46A00C89F23 /* white-view.png */; };
 		5A9DE72119A7A46A00C89F23 /* white-view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE6AD19A7A46A00C89F23 /* white-view@2x.png */; };
+		5A9DE72419A7B3E200C89F23 /* VLColorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A9DE72319A7B3E200C89F23 /* VLColorManager.m */; };
 		5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */; };
 		5AACFBF819A2C7BE003D9504 /* VLDrawerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */; };
 		5AE5E1C7199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
@@ -169,6 +174,10 @@
 /* Begin PBXFileReference section */
 		5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDrawerTableViewController.h; sourceTree = "<group>"; };
 		5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDrawerTableViewController.m; sourceTree = "<group>"; };
+		5A5740EF19ABAC9600F4FC5C /* white-messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-messages.png"; sourceTree = "<group>"; };
+		5A5740F019ABAC9600F4FC5C /* blue-messages.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-messages.png"; sourceTree = "<group>"; };
+		5A5740F419ABBF3C00F4FC5C /* imageNotAvailable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "imageNotAvailable@2x.png"; sourceTree = "<group>"; };
+		5A5740F519ABBF3C00F4FC5C /* imageNotAvailable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imageNotAvailable.png; sourceTree = "<group>"; };
 		5A6F6CC319A2B2A2003AA4EF /* VLLoungeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLLoungeTableViewController.h; sourceTree = "<group>"; };
 		5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLLoungeTableViewController.m; sourceTree = "<group>"; };
 		5A6F6CCC19A2B81D003AA4EF /* VLGuideTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLGuideTableViewController.h; sourceTree = "<group>"; };
@@ -313,6 +322,8 @@
 		5A9DE6AB19A7A46A00C89F23 /* white-user-profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-user-profile@2x.png"; sourceTree = "<group>"; };
 		5A9DE6AC19A7A46A00C89F23 /* white-view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-view.png"; sourceTree = "<group>"; };
 		5A9DE6AD19A7A46A00C89F23 /* white-view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "white-view@2x.png"; sourceTree = "<group>"; };
+		5A9DE72219A7B3E200C89F23 /* VLColorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLColorManager.h; sourceTree = "<group>"; };
+		5A9DE72319A7B3E200C89F23 /* VLColorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLColorManager.m; sourceTree = "<group>"; };
 		5AACFBF319A2BE6C003D9504 /* VLFollowersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLFollowersTableViewController.h; sourceTree = "<group>"; };
 		5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLFollowersTableViewController.m; sourceTree = "<group>"; };
 		5AACFBF619A2C7BE003D9504 /* VLDrawerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDrawerTableViewCell.h; sourceTree = "<group>"; };
@@ -387,6 +398,15 @@
 				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		5A5740F319ABBF2A00F4FC5C /* place holders */ = {
+			isa = PBXGroup;
+			children = (
+				5A5740F419ABBF3C00F4FC5C /* imageNotAvailable@2x.png */,
+				5A5740F519ABBF3C00F4FC5C /* imageNotAvailable.png */,
+			);
+			name = "place holders";
 			sourceTree = "<group>";
 		};
 		5A6F6CE419A2B899003AA4EF /* Navigation */ = {
@@ -482,6 +502,8 @@
 				5A41A6EC19A2B0DC00433337 /* Catagories */,
 				5AE5E1E1199F12E9007CDA0D /* Images.xcassets */,
 				5AE5E1CD199F12E9007CDA0D /* Supporting Files */,
+				5A9DE72219A7B3E200C89F23 /* VLColorManager.h */,
+				5A9DE72319A7B3E200C89F23 /* VLColorManager.m */,
 			);
 			path = Voloe;
 			sourceTree = "<group>";
@@ -538,6 +560,7 @@
 		99ABEDA119A4065D00415AEA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				5A5740F319ABBF2A00F4FC5C /* place holders */,
 				99ABEDA219A4066D00415AEA /* Icons */,
 			);
 			name = Images;
@@ -546,6 +569,8 @@
 		99ABEDA219A4066D00415AEA /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				5A5740EF19ABAC9600F4FC5C /* white-messages.png */,
+				5A5740F019ABAC9600F4FC5C /* blue-messages.png */,
 				5A9DE63A19A7A46A00C89F23 /* blue-add.png */,
 				5A9DE63B19A7A46A00C89F23 /* blue-add@2x.png */,
 				5A9DE63C19A7A46A00C89F23 /* blue-camera.png */,
@@ -771,6 +796,7 @@
 				5A9DE72019A7A46A00C89F23 /* white-view.png in Resources */,
 				5A9DE6D819A7A46A00C89F23 /* blue-share.png in Resources */,
 				5A9DE70119A7A46A00C89F23 /* white-like@2x.png in Resources */,
+				5A5740F119ABAC9600F4FC5C /* white-messages.png in Resources */,
 				5A9DE6CD19A7A46A00C89F23 /* blue-manage-list@2x.png in Resources */,
 				5A9DE6B019A7A46A00C89F23 /* blue-camera.png in Resources */,
 				5A9DE71619A7A46A00C89F23 /* white-terms-of-use.png in Resources */,
@@ -798,6 +824,7 @@
 				5A9DE6D119A7A46A00C89F23 /* blue-notifications@2x.png in Resources */,
 				5A9DE6D619A7A46A00C89F23 /* blue-save.png in Resources */,
 				5A9DE6E919A7A46A00C89F23 /* white-add@2x.png in Resources */,
+				5A5740F219ABAC9600F4FC5C /* blue-messages.png in Resources */,
 				5A9DE70019A7A46A00C89F23 /* white-like.png in Resources */,
 				5A9DE70F19A7A46A00C89F23 /* white-remove@2x.png in Resources */,
 				5A9DE71A19A7A46A00C89F23 /* white-trending-users.png in Resources */,
@@ -820,6 +847,7 @@
 				5A9DE6DF19A7A46A00C89F23 /* blue-trending-goals@2x.png in Resources */,
 				5A9DE6FA19A7A46A00C89F23 /* white-friend-request-sent.png in Resources */,
 				5A9DE71519A7A46A00C89F23 /* white-support@2x.png in Resources */,
+				5A5740F619ABBF3C00F4FC5C /* imageNotAvailable@2x.png in Resources */,
 				5A9DE6CE19A7A46A00C89F23 /* blue-navigation.png in Resources */,
 				5A9DE6FB19A7A46A00C89F23 /* white-friend-request-sent@2x.png in Resources */,
 				5A9DE70C19A7A46A00C89F23 /* white-privacy.png in Resources */,
@@ -863,6 +891,7 @@
 				5A9DE6BE19A7A46A00C89F23 /* blue-follower.png in Resources */,
 				5A9DE6D719A7A46A00C89F23 /* blue-save@2x.png in Resources */,
 				5A9DE6C819A7A46A00C89F23 /* blue-log-out.png in Resources */,
+				5A5740F719ABBF3C00F4FC5C /* imageNotAvailable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -929,6 +958,7 @@
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
 				5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */,
 				5A6F6CE019A2B875003AA4EF /* VLGoalsTableViewController.m in Sources */,
+				5A9DE72419A7B3E200C89F23 /* VLColorManager.m in Sources */,
 				5A6F6CEC19A2B8CD003AA4EF /* VLSupportTableViewController.m in Sources */,
 				5A6F6CD719A2B845003AA4EF /* VLNotificationTableViewController.m in Sources */,
 				5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */,

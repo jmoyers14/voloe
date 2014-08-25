@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MMDrawerController.h"
-
+#import "VLColorManager.h"
 
 
 @interface AppDelegate ()
@@ -39,10 +39,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    //initialize color manager
+    VLColorManager *colorManager = [VLColorManager sharedInstance];
+    [colorManager setColor:UIColorFromRGB(0x3D454F) forKey:@"DrawerHeader"];
+    [colorManager setColor:UIColorFromRGB(0xDDEEFF) forKey:@"DrawerHeaderText"];
+    [colorManager setColor:UIColorFromRGB(0x5D656F) forKey:@"DrawerCellBG"];
+    [colorManager setColor:UIColorFromRGB(0x222222) forKey:@"DrawerCellSelectedBG"];
+    
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 UIColorFromRGB(0x00acbf),NSForegroundColorAttributeName,
                                 nil];
 
+    
+    //Set up application appearance
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:attributes

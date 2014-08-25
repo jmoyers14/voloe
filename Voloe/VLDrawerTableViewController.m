@@ -9,8 +9,8 @@
 #import "VLDrawerTableViewController.h"
 #import "UIViewController+MMDrawerController.h"
 #import "VLDrawerTableViewCell.h"
+#import "VLColorManager.h"
 
-#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 typedef NS_ENUM(NSInteger, VLDrawerSection) {
     VLDrawerSectionNavigationItems,
@@ -244,8 +244,9 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 
 //set text and background color of table headers
 - (void) tableView:(UITableView *)tableView willDisplayHeaderView:(UIView *)view forSection:(NSInteger)section {
-    [view setTintColor:UIColorFromRGB(0x3d454f)];
-    [[((UITableViewHeaderFooterView *)view) textLabel] setTextColor:UIColorFromRGB(0xDDEEFF)];
+    VLColorManager *colorManager = [VLColorManager sharedInstance];
+    [view setTintColor:[colorManager colorForKey:@"DrawerHeader"]];
+    [[((UITableViewHeaderFooterView *)view) textLabel] setTextColor:[colorManager colorForKey:@"DrawerHeaderText"]];
 }
 
 
@@ -310,13 +311,15 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
 }
 
 - (void) tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    VLColorManager *colorManager = [VLColorManager sharedInstance];
     VLDrawerTableViewCell *cell = (VLDrawerTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [cell setBackgroundColor:UIColorFromRGB(0x222222)];
+    [cell setBackgroundColor:[colorManager colorForKey:@"DrawerCellSelectedBG"]];
 }
 
 - (void) tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    VLColorManager *colorManager = [VLColorManager sharedInstance];
     VLDrawerTableViewCell *cell = (VLDrawerTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
-    [cell setBackgroundColor:UIColorFromRGB(0x5d656f)];
+    [cell setBackgroundColor:[colorManager colorForKey:@"DrawerCellBG"]];
 }
 
 
