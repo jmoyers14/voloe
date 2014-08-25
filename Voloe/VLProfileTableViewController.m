@@ -39,13 +39,15 @@ NSMutableArray *_goals;
     
     _goals = [[NSMutableArray alloc] init];
     
-    
+    //set tap gesture to launch camera when profile picture is tapped
+    [[self profilePicture] setUserInteractionEnabled:YES];
+    UITapGestureRecognizer *tpgr = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showActionSheet:)];
+    [[self profilePicture] addGestureRecognizer:tpgr];
     
 #warning - remove dummy data
-    for(int i = 1; i < 11; i++) {
-        [_goals addObject:[UIImage imageNamed:[NSString stringWithFormat:@"test%d", i]]];
+    for(int i = 0; i < 10; i++) {
+        [_goals addObject:[NSString stringWithFormat:@"image%d.png", i]];
     }
-    
 }
 
 //add title labels below the count displayed on each button
@@ -123,24 +125,25 @@ NSMutableArray *_goals;
 {
     VLGridListTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"GridListCell" forIndexPath:indexPath];
     
-    NSInteger colOne = [indexPath row] * 3;
+    NSInteger colOne = ([indexPath row] * 3);
     NSInteger colTwo = ([indexPath row] * 3) + 1;
     NSInteger colThree = ([indexPath row] * 3) + 2;
     
+    
     if (colOne < [_goals count]) {
-        [[cell colOneImage] setImage:[_goals objectAtIndex:colOne]];
+        [[cell colOneImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colOne]]];
     } else {
         [[cell colOneImage] setHidden:YES];
     }
     
     if (colTwo < [_goals count]) {
-        [[cell colTwoImage] setImage:[_goals objectAtIndex:colTwo]];
+        [[cell colTwoImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colTwo]]];
     } else {
         [[cell colTwoImage] setHidden:YES];
     }
     
     if (colThree < [_goals count]) {
-        [[cell colThreeImage] setImage:[_goals objectAtIndex:colThree]];
+        [[cell colThreeImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colThree]]];
     } else {
         [[cell colThreeImage] setHidden:YES];
     }
@@ -149,55 +152,67 @@ NSMutableArray *_goals;
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 110.0;
+    return 108.0;
 }
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
+#pragma mark - show camera
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
+- (void) showImagePicker:(UIImagePickerControllerSourceType) type {
+    UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+    [imagePickerController setSourceType:type];
+    [imagePickerController setDelegate:self];
+    [imagePickerController setAllowsEditing:YES];
+    [self presentViewController:imagePickerController animated:YES completion:nil];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+- (void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
+    [[self profilePicture] setImage:image];
+#warning - add upload image code here
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+#pragma mark - UIActionSheetDelegate
+
+- (IBAction)showActionSheet:(id)sender
+{
+    NSString *actionSheetTitle = @"Set profile picture";
+    NSString *deleteTitle = @"Delete Photo";
+    NSString *chooseFromLibrary = @"Choose Existing Photo";
+    NSString *takeNewPhoto = @"Take Photo";
+    NSString *cancelTitle = @"Cancel";
+    
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:actionSheetTitle delegate:self cancelButtonTitle:cancelTitle destructiveButtonTitle:deleteTitle otherButtonTitles:chooseFromLibrary, takeNewPhoto, nil];
+    
+    [actionSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (buttonIndex) {
+        case 0:
+            NSLog(@"delete the image");
+            break;
+        case 1:
+            [self showImagePicker:UIImagePickerControllerSourceTypePhotoLibrary];
+            break;
+        case 2:
+            if ([UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
+            {
+                [self showImagePicker:UIImagePickerControllerSourceTypeCamera];
+            }
+            else
+            {
+                NSLog(@"no camera");
+            }
+            break;
+        default:
+            break;
+    }
+}
 
 @end
