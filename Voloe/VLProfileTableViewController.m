@@ -8,12 +8,20 @@
 
 #import "VLProfileTableViewController.h"
 #import "VLCenterViewController.h"
-
+#import "VLGridListTableViewCell.h"
 @interface VLProfileTableViewController ()
 
 @end
 
 @implementation VLProfileTableViewController
+@synthesize profilePicture      = _profilePicture;
+@synthesize goalsAchievedButton = _goalsAchievedButton;
+@synthesize goalsButton         = _goalsButton;
+@synthesize assistsButton       = _assistsButton;
+@synthesize friendsButton       = _friendsButton;
+@synthesize followersButton     = _followersButton;
+
+NSMutableArray *_goals;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,12 +35,69 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self addButtonLabels];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    _goals = [[NSMutableArray alloc] init];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+#warning - remove dummy data
+    for(int i = 1; i < 11; i++) {
+        [_goals addObject:[UIImage imageNamed:[NSString stringWithFormat:@"test%d", i]]];
+    }
+    
+}
+
+//add title labels below the count displayed on each button
+- (void) addButtonLabels {
+    
+#warning - remove dummy data
+    //dummy data replace with real data
+    NSString *goalCount = @"250";
+    NSString *achievedCount = @"25";
+    NSString *assistsCount = @"1004";
+    NSString *friendsCount = @"3000";
+    NSString *followersCount = @"2431";
+    
+    NSMutableAttributedString *goalTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Goals:\n%@", goalCount]];
+    NSMutableAttributedString *achievedTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Goals achieved:\n%@", achievedCount]];
+    NSMutableAttributedString *assistsTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Assists:\n%@", assistsCount]];
+    NSMutableAttributedString *friendsTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Friends:\n%@", friendsCount]];
+    NSMutableAttributedString *followersTitle = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"Followers:\n%@", followersCount]];
+    
+    
+    
+    
+    
+    UIFont *boldFont = [UIFont boldSystemFontOfSize:16];
+    
+    
+    [goalTitle addAttribute:NSFontAttributeName value:boldFont range: [[goalTitle string] rangeOfString:goalCount]];
+    [achievedTitle addAttribute:NSFontAttributeName value:boldFont range:[[achievedTitle string] rangeOfString:achievedCount]];
+    [assistsTitle addAttribute:NSFontAttributeName value:boldFont range:[[assistsTitle string] rangeOfString:assistsCount]];
+    [friendsTitle addAttribute:NSFontAttributeName value:boldFont range:[[friendsTitle string] rangeOfString:friendsCount]];
+    [followersTitle addAttribute:NSFontAttributeName value:boldFont range:[[followersTitle string] rangeOfString:followersCount]];
+    
+    [[[self goalsButton] titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+    [[[self goalsButton] titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self goalsButton] setAttributedTitle:goalTitle forState:UIControlStateNormal];
+    
+    [[[self goalsAchievedButton] titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+    [[[self goalsAchievedButton] titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self goalsAchievedButton] setAttributedTitle:achievedTitle forState:UIControlStateNormal];
+    
+    [[[self assistsButton] titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+    [[[self assistsButton] titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self assistsButton] setAttributedTitle:assistsTitle forState:UIControlStateNormal];
+    
+    [[[self friendsButton] titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+    [[[self friendsButton] titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self friendsButton] setAttributedTitle:friendsTitle forState:UIControlStateNormal];
+    
+    [[[self followersButton] titleLabel] setLineBreakMode:NSLineBreakByWordWrapping];
+    [[[self followersButton] titleLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self followersButton] setAttributedTitle:followersTitle forState:UIControlStateNormal];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,29 +110,47 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return ([_goals count] + 2) / 3;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    VLGridListTableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"GridListCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSInteger colOne = [indexPath row] * 3;
+    NSInteger colTwo = ([indexPath row] * 3) + 1;
+    NSInteger colThree = ([indexPath row] * 3) + 2;
+    
+    if (colOne < [_goals count]) {
+        [[cell colOneImage] setImage:[_goals objectAtIndex:colOne]];
+    } else {
+        [[cell colOneImage] setHidden:YES];
+    }
+    
+    if (colTwo < [_goals count]) {
+        [[cell colTwoImage] setImage:[_goals objectAtIndex:colTwo]];
+    } else {
+        [[cell colTwoImage] setHidden:YES];
+    }
+    
+    if (colThree < [_goals count]) {
+        [[cell colThreeImage] setImage:[_goals objectAtIndex:colThree]];
+    } else {
+        [[cell colThreeImage] setHidden:YES];
+    }
     
     return cell;
 }
-*/
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 110.0;
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

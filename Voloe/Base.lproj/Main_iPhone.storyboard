@@ -128,7 +128,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Ncn-hG-cXx">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="rGl-Vd-mft">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="rGl-Vd-mft">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="kGV-4L-xbf" id="5eQ-fm-pnY"/>
                             </connections>
@@ -163,7 +163,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="mmt-dx-mpu">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="kfv-pB-ddt">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="kfv-pB-ddt">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="PLx-MS-Ltq" id="c1a-CD-FOy"/>
                             </connections>
@@ -305,7 +305,7 @@ WHEN YOU ACCESS OUR WEBSITES, YOU AGREE TO THIS PRIVACY POLICY. IF YOU DO NOT AG
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RG2-Eq-gJT">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="7c2-zx-qUm">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="7c2-zx-qUm">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="cjB-xI-HSU" id="gSj-Wn-r81"/>
                             </connections>
@@ -455,7 +455,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="C2v-7y-oIi">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="33D-HC-rpF">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="33D-HC-rpF">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="rwd-Tn-xjx" id="nzE-mf-OB2"/>
                             </connections>
@@ -520,7 +520,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="sL3-Po-Spd">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Wuv-zl-Ir3">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="Wuv-zl-Ir3">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="YEa-TP-Edt" id="BN3-nb-mwn"/>
                             </connections>
@@ -535,64 +535,102 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
         <scene sceneID="uta-5W-oIY">
             <objects>
                 <tableViewController id="A87-D6-28f" customClass="VLProfileTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sr4-Sr-Sec">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="Sr4-Sr-Sec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="ouW-QM-QQ3">
+                            <rect key="frame" x="0.0" y="64" width="320" height="125"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageNotAvailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="BMT-HC-yRF">
+                                    <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVV-nh-ArV">
+                                    <rect key="frame" x="90" y="48" width="40" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Goals">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KGs-Ed-72k">
+                                    <rect key="frame" x="141" y="48" width="108" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Goals Achieved">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pH5-TW-Ynn">
+                                    <rect key="frame" x="261" y="48" width="49" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Assists">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qcV-7S-8CD">
+                                    <rect key="frame" x="115" y="10" width="51" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Friends">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0g-7f-zAR">
+                                    <rect key="frame" x="208" y="10" width="66" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Followers">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jeremy Moyers" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="72" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-oR-HCp">
+                                    <rect key="frame" x="10" y="84" width="72" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwb-mx-nzU">
+                                    <rect key="frame" x="90" y="84" width="220" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.79312044900000001" green="0.79312044900000001" blue="0.79312044900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Edit Profile">
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HeaderCell" rowHeight="125" id="r07-aH-gjE">
-                                <rect key="frame" x="0.0" y="86" width="320" height="125"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="GridListCell" rowHeight="110" id="OCc-Pq-lg4" customClass="VLGridListTableViewCell">
+                                <rect key="frame" x="0.0" y="211" width="320" height="110"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r07-aH-gjE" id="fyo-0D-dxY">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="124"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OCc-Pq-lg4" id="U7b-fn-mMj">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="109"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageNotAvailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="fXz-NG-Qwc">
-                                            <rect key="frame" x="10" y="10" width="70" height="70"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageNotAvailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="dCt-Mq-cHa">
+                                            <rect key="frame" x="0.0" y="2" width="106" height="106"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ez1-Mk-Nmt">
-                                            <rect key="frame" x="88" y="10" width="49" height="39"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="25">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0z-1c-nyK">
-                                            <rect key="frame" x="145" y="10" width="108" height="39"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Goals Achieved">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1A-yi-6nX">
-                                            <rect key="frame" x="261" y="14" width="49" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Assists">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5W-yE-of7">
-                                            <rect key="frame" x="202" y="47" width="51" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Friends">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpX-bg-ll2">
-                                            <rect key="frame" x="113" y="47" width="66" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <state key="normal" title="Followers">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageNotAvailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-WD-mKR">
+                                            <rect key="frame" x="107" y="2" width="106" height="106"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="imageNotAvailable.png" translatesAutoresizingMaskIntoConstraints="NO" id="SHI-qF-5Ng">
+                                            <rect key="frame" x="214" y="2" width="106" height="106"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="colOneImage" destination="dCt-Mq-cHa" id="3zJ-eR-7mD"/>
+                                    <outlet property="colThreeImage" destination="SHI-qF-5Ng" id="2su-gd-euR"/>
+                                    <outlet property="colTwoImage" destination="AWQ-WD-mKR" id="7CP-N1-M0c"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -601,12 +639,20 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="VAU-DC-6G9">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="xhV-gP-8wi">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="xhV-gP-8wi">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="A87-D6-28f" id="w1w-ic-KzM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="assistsButton" destination="pH5-TW-Ynn" id="QM7-EP-me5"/>
+                        <outlet property="followersButton" destination="D0g-7f-zAR" id="Ukd-AM-awa"/>
+                        <outlet property="friendsButton" destination="qcV-7S-8CD" id="IB9-7u-dIS"/>
+                        <outlet property="goalsAchievedButton" destination="KGs-Ed-72k" id="3eu-yM-sW1"/>
+                        <outlet property="goalsButton" destination="ZVV-nh-ArV" id="IGn-Ws-hZV"/>
+                        <outlet property="profilePicture" destination="BMT-HC-yRF" id="Y5a-16-bli"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHa-df-kfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -646,7 +692,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lounge" id="ObM-X2-iBq">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="WE8-Xo-Kdh">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="WE8-Xo-Kdh">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="PCn-pw-tCS" id="OUX-Te-ZVm"/>
                             </connections>
@@ -681,7 +727,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="Sny-RY-i8V">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="yAH-g2-RZf">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="yAH-g2-RZf">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="ifS-JE-LV6" id="Zo6-ha-B7g"/>
                             </connections>
@@ -716,7 +762,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="0BS-vq-pt6">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="5kS-Fq-mcZ">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="5kS-Fq-mcZ">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="4lk-gl-kcy" id="9M4-w3-ihx"/>
                             </connections>
@@ -781,7 +827,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ovB-3l-36t">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="cZ1-cP-V2x">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="cZ1-cP-V2x">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="BB0-d3-IMj" id="kEt-UD-9hE"/>
                             </connections>
@@ -846,7 +892,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="RbF-bZ-a7v">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="fux-Ew-gQg">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="fux-Ew-gQg">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="pfI-A5-pHg" id="XlN-uR-gNO"/>
                             </connections>
@@ -941,7 +987,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="hHy-Rh-DLr">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Ekv-Rh-KSC">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="Ekv-Rh-KSC">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="vA3-ig-CnD" id="VKJ-CD-dnc"/>
                             </connections>
@@ -950,7 +996,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vRi-Yp-pgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="423" y="1491"/>
+            <point key="canvasLocation" x="423" y="1477"/>
         </scene>
         <!--Followers Table View Controller - Root View Controller-->
         <scene sceneID="eEi-ru-bKo">
@@ -976,7 +1022,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="1Bm-KM-CIK">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="tPd-uN-Hf1">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="tPd-uN-Hf1">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="QUk-xE-WXd" id="BRI-9J-LUg"/>
                             </connections>
@@ -1011,7 +1057,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="nIx-Pp-kSh">
-                        <barButtonItem key="rightBarButtonItem" title="Slide" id="Ha5-Y4-D5o">
+                        <barButtonItem key="rightBarButtonItem" image="blue-navigation.png" id="Ha5-Y4-D5o">
                             <connections>
                                 <action selector="rightDrawerButtonPress:" destination="DcG-od-QNT" id="9h0-JO-NQx"/>
                             </connections>
@@ -1069,6 +1115,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
         </scene>
     </scenes>
     <resources>
+        <image name="blue-navigation.png" width="22" height="22"/>
         <image name="imageNotAvailable.png" width="250" height="250"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
