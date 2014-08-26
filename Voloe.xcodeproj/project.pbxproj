@@ -172,6 +172,7 @@
 		5AE5E1EB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
 		5AE5E1F3199F12E9007CDA0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F1199F12E9007CDA0D /* InfoPlist.strings */; };
 		5AE5E1F5199F12E9007CDA0D /* VoloeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */; };
+		9949411119AD1B89009BCC4B /* VLEditProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -373,6 +374,8 @@
 		5AE5E1F2199F12E9007CDA0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoloeTests.m; sourceTree = "<group>"; };
 		7813ECD9320147EBA25ED9F1 /* Pods-Voloe.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voloe.xcconfig"; path = "Pods/Pods-Voloe.xcconfig"; sourceTree = "<group>"; };
+		9949410F19AD1B89009BCC4B /* VLEditProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLEditProfileTableViewController.h; sourceTree = "<group>"; };
+		9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLEditProfileTableViewController.m; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -460,12 +463,11 @@
 		5A6F6CE419A2B899003AA4EF /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				9949410E19AD1B5A009BCC4B /* ProfileView */,
 				5A6F6CC319A2B2A2003AA4EF /* VLLoungeTableViewController.h */,
 				5A6F6CC419A2B2A2003AA4EF /* VLLoungeTableViewController.m */,
 				5A6F6CCC19A2B81D003AA4EF /* VLGuideTableViewController.h */,
 				5A6F6CCD19A2B81D003AA4EF /* VLGuideTableViewController.m */,
-				5A6F6CCF19A2B82A003AA4EF /* VLProfileTableViewController.h */,
-				5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */,
 				5A6F6CD219A2B838003AA4EF /* VLManageTableViewController.h */,
 				5A6F6CD319A2B838003AA4EF /* VLManageTableViewController.m */,
 				5A6F6CD519A2B845003AA4EF /* VLNotificationTableViewController.h */,
@@ -603,6 +605,17 @@
 			children = (
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		9949410E19AD1B5A009BCC4B /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				5A6F6CCF19A2B82A003AA4EF /* VLProfileTableViewController.h */,
+				5A6F6CD019A2B82A003AA4EF /* VLProfileTableViewController.m */,
+				9949410F19AD1B89009BCC4B /* VLEditProfileTableViewController.h */,
+				9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */,
+			);
+			name = ProfileView;
 			sourceTree = "<group>";
 		};
 		99ABEDA119A4065D00415AEA /* Images */ = {
@@ -1013,6 +1026,7 @@
 				5A6F6CE919A2B8C2003AA4EF /* VLSettingsTableViewController.m in Sources */,
 				5A6F6CDD19A2B864003AA4EF /* VLMessagesTableViewController.m in Sources */,
 				5AACFBF819A2C7BE003D9504 /* VLDrawerTableViewCell.m in Sources */,
+				9949411119AD1B89009BCC4B /* VLEditProfileTableViewController.m in Sources */,
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,

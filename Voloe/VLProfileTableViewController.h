@@ -16,5 +16,6 @@
 @property (nonatomic, strong) IBOutlet UIButton *friendsButton;
 @property (nonatomic, strong) IBOutlet UIButton *followersButton;
 
+- (IBAction)editProfile:(id)sender;
 
 @end

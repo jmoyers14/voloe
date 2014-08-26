@@ -123,7 +123,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
                                       @"FollowersNavController",
                                       @"MessagesNavController",nil];
     
-    NSArray *navigationIcons = [NSArray arrayWithObjects:@"contest-trophy",
+    NSArray *navigationIcons = [NSArray arrayWithObjects:@"blue-contest-trophy",
                                 @"blue-guide",
                                 @"blue-user-profile",
                                 @"blue-lounge",
@@ -177,7 +177,7 @@ typedef NS_ENUM(NSInteger, VLNavigationItemRow) {
                                                       @"PrivacyNavController",
                                                       @"LogOutController", nil];
     
-    NSArray *helpIcons = [NSArray arrayWithObjects:@"edit",
+    NSArray *helpIcons = [NSArray arrayWithObjects:@"blue-edit",
                           @"blue-support",
                           @"blue-terms-of-use",
                           @"blue-privacy",

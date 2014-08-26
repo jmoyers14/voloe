@@ -108,6 +108,10 @@ NSMutableArray *_goals;
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)editProfile:(id)sender {
+    [self performSegueWithIdentifier:@"EditProfile" sender:self];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
