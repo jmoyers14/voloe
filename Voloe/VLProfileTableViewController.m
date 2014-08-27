@@ -9,7 +9,22 @@
 #import "VLProfileTableViewController.h"
 #import "VLCenterViewController.h"
 #import "VLGridListTableViewCell.h"
-@interface VLProfileTableViewController ()
+
+
+
+typedef NS_ENUM(NSInteger, SortButton) {
+    SortButtonAll,
+    SortButtonAchieved,
+    SortButtonToBeAchieved
+};
+
+
+@interface VLProfileTableViewController () {
+    NSMutableArray *_goals;
+    NSArray *_orderOptions;
+    UITextField *_hackField;
+    UIPickerView *_pickerView;
+}
 
 @end
 
@@ -20,8 +35,10 @@
 @synthesize assistsButton       = _assistsButton;
 @synthesize friendsButton       = _friendsButton;
 @synthesize followersButton     = _followersButton;
-
-NSMutableArray *_goals;
+@synthesize orderButton         = _orderButton;
+@synthesize allButton           = _allButton;
+@synthesize achievedButton      = _achievedButton;
+@synthesize toBeButton          = _toBeButton;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,8 +53,11 @@ NSMutableArray *_goals;
 {
     [super viewDidLoad];
     [self addButtonLabels];
-    
+    [self addHiddenTextField];
+    [_allButton setSelected:YES];
     _goals = [[NSMutableArray alloc] init];
+    _orderOptions = [NSArray arrayWithObjects:@"A-Z", @"Oldest", @"Newest", @"Most Liked", @"Least Liked", nil];
+    
     
     //set tap gesture to launch camera when profile picture is tapped
     [[self profilePicture] setUserInteractionEnabled:YES];
@@ -45,10 +65,26 @@ NSMutableArray *_goals;
     [[self profilePicture] addGestureRecognizer:tpgr];
     
 #warning - remove dummy data
+    
+    [self setTitle:@"Jeremy Moyers"];
+    
     for(int i = 0; i < 10; i++) {
         [_goals addObject:[NSString stringWithFormat:@"image%d.png", i]];
     }
 }
+
+
+//adds a hidden text field to control the presenting of the UIPickerView
+//This is hacky but cleaner than adding the UIPicker to an action sheet
+- (void) addHiddenTextField {
+    _pickerView = [[UIPickerView alloc] init];
+    [_pickerView setDelegate:self];
+    [_pickerView setDataSource:self];
+    _hackField = [[UITextField alloc] initWithFrame:CGRectMake(0.0, 0.0, 1.0, 0.0)];
+    [_hackField setInputView:_pickerView];
+    [[self view] addSubview:_hackField];
+}
+
 
 //add title labels below the count displayed on each button
 - (void) addButtonLabels {
@@ -110,6 +146,53 @@ NSMutableArray *_goals;
 
 - (IBAction)editProfile:(id)sender {
     [self performSegueWithIdentifier:@"EditProfile" sender:self];
+}
+
+- (IBAction)orderButton:(id)sender {
+    [_hackField becomeFirstResponder];
+}
+
+- (IBAction)toggleSort:(id)sender {
+    
+    UIButton *toggleButton = (UIButton *)sender;
+    
+    switch ([toggleButton tag]) {
+        case SortButtonAll:
+            [_allButton setSelected:YES];
+            [_achievedButton setSelected:NO];
+            break;
+        case SortButtonAchieved:
+            [_achievedButton setSelected: YES];
+            [_allButton setSelected:NO];
+            [_toBeButton setSelected:NO];
+            break;
+        case SortButtonToBeAchieved:
+            [_toBeButton setSelected:YES];
+            [_allButton setSelected:NO];
+            [_achievedButton setSelected:NO];
+            break;
+    }
+}
+
+#pragma mark - UIPickerViewDataSource
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
+    return [_orderOptions count];
+}
+
+- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+    return [_orderOptions objectAtIndex:row];
+}
+
+#pragma mark - UIPickerViewDelegate
+
+- (void) pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    [[self orderButton] setTitle:[_orderOptions objectAtIndex:row] forState:UIControlStateNormal];
+    [_hackField resignFirstResponder];
 }
 
 #pragma mark - Table view data source
