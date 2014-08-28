@@ -48,6 +48,8 @@
 		5A6F6CF219A2B8FE003AA4EF /* VLPrivacyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF119A2B8FE003AA4EF /* VLPrivacyViewController.m */; };
 		5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */; };
 		5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */; };
+		5A77151C19AF9ADE000FF43D /* VLListItemGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A77151B19AF9ADE000FF43D /* VLListItemGridCell.xib */; };
+		5A77152019AF9FCF000FF43D /* VLListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77151F19AF9FCF000FF43D /* VLListItemView.m */; };
 		5A9DE6AE19A7A46A00C89F23 /* blue-add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63A19A7A46A00C89F23 /* blue-add.png */; };
 		5A9DE6AF19A7A46A00C89F23 /* blue-add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63B19A7A46A00C89F23 /* blue-add@2x.png */; };
 		5A9DE6B019A7A46A00C89F23 /* blue-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63C19A7A46A00C89F23 /* blue-camera.png */; };
@@ -250,6 +252,9 @@
 		5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLTermsViewController.m; sourceTree = "<group>"; };
 		5A6F6CF619A2B97C003AA4EF /* VLCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLCenterViewController.h; sourceTree = "<group>"; };
 		5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLCenterViewController.m; sourceTree = "<group>"; };
+		5A77151B19AF9ADE000FF43D /* VLListItemGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VLListItemGridCell.xib; sourceTree = "<group>"; };
+		5A77151E19AF9FCF000FF43D /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
+		5A77151F19AF9FCF000FF43D /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
 		5A9DE63A19A7A46A00C89F23 /* blue-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-add.png"; sourceTree = "<group>"; };
 		5A9DE63B19A7A46A00C89F23 /* blue-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-add@2x.png"; sourceTree = "<group>"; };
 		5A9DE63C19A7A46A00C89F23 /* blue-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-camera.png"; sourceTree = "<group>"; };
@@ -447,10 +452,9 @@
 		5A41A6ED19A2B0EC00433337 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				5A77151D19AF9FAB000FF43D /* Profile Grid View */,
 				5AACFBF619A2C7BE003D9504 /* VLDrawerTableViewCell.h */,
 				5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */,
-				5A57411419ABEC2E00F4FC5C /* VLGridListTableViewCell.h */,
-				5A57411519ABEC2E00F4FC5C /* VLGridListTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -459,6 +463,7 @@
 			isa = PBXGroup;
 			children = (
 				5AE5E1D8199F12E9007CDA0D /* Main_iPhone.storyboard */,
+				5A77151B19AF9ADE000FF43D /* VLListItemGridCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -491,7 +496,7 @@
 			name = testImages;
 			sourceTree = "<group>";
 		};
-		5A6F6CE419A2B899003AA4EF /* Navigation */ = {
+		5A6F6CE419A2B899003AA4EF /* Main Navigation */ = {
 			isa = PBXGroup;
 			children = (
 				9949410E19AD1B5A009BCC4B /* ProfileView */,
@@ -510,7 +515,7 @@
 				5AACFBF319A2BE6C003D9504 /* VLFollowersTableViewController.h */,
 				5AACFBF419A2BE6C003D9504 /* VLFollowersTableViewController.m */,
 			);
-			name = Navigation;
+			name = "Main Navigation";
 			sourceTree = "<group>";
 		};
 		5A6F6CE519A2B8A1003AA4EF /* Trending */ = {
@@ -537,6 +542,17 @@
 				5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */,
 			);
 			name = HelpSettings;
+			sourceTree = "<group>";
+		};
+		5A77151D19AF9FAB000FF43D /* Profile Grid View */ = {
+			isa = PBXGroup;
+			children = (
+				5A57411419ABEC2E00F4FC5C /* VLGridListTableViewCell.h */,
+				5A57411519ABEC2E00F4FC5C /* VLGridListTableViewCell.m */,
+				5A77151E19AF9FCF000FF43D /* VLListItemView.h */,
+				5A77151F19AF9FCF000FF43D /* VLListItemView.m */,
+			);
+			name = "Profile Grid View";
 			sourceTree = "<group>";
 		};
 		5AE5E1BA199F12E8007CDA0D = {
@@ -623,7 +639,7 @@
 			children = (
 				5A6F6CE619A2B8A6003AA4EF /* HelpSettings */,
 				5A6F6CE519A2B8A1003AA4EF /* Trending */,
-				5A6F6CE419A2B899003AA4EF /* Navigation */,
+				5A6F6CE419A2B899003AA4EF /* Main Navigation */,
 				5A41A6ED19A2B0EC00433337 /* Cells */,
 				5A41A6E919A26C0400433337 /* VLDrawerTableViewController.h */,
 				5A41A6EA19A26C0400433337 /* VLDrawerTableViewController.m */,
@@ -1005,6 +1021,7 @@
 				5A9DE6C419A7A46A00C89F23 /* blue-guide.png in Resources */,
 				5A9DE6BE19A7A46A00C89F23 /* blue-follower.png in Resources */,
 				5A9DE6D719A7A46A00C89F23 /* blue-save@2x.png in Resources */,
+				5A77151C19AF9ADE000FF43D /* VLListItemGridCell.xib in Resources */,
 				5A9DE6C819A7A46A00C89F23 /* blue-log-out.png in Resources */,
 				5A5740F719ABBF3C00F4FC5C /* imageNotAvailable.png in Resources */,
 				5A140D1619AE83D8001D0E60 /* birthday@2x.png in Resources */,
@@ -1072,6 +1089,7 @@
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
+				5A77152019AF9FCF000FF43D /* VLListItemView.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
 				9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */,

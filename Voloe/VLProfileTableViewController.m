@@ -239,7 +239,7 @@ typedef NS_ENUM(NSInteger, SortButton) {
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 108.0;
+    return 140.0;
 }
 
 #pragma mark - show camera
