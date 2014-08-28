@@ -47,15 +47,15 @@
     [colorManager setColor:UIColorFromRGB(0x222222) forKey:@"DrawerCellSelectedBG"];
     
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                UIColorFromRGB(0x00acbf),NSForegroundColorAttributeName,
+                                UIColorFromRGB(0x00aabc),NSForegroundColorAttributeName,
                                 nil];
 
     
     //Set up application appearance
     [[UINavigationBar appearance] setTitleTextAttributes:attributes];
     
-    [[UIBarButtonItem appearance] setTitleTextAttributes:attributes
-                                                forState:UIControlStateNormal];
+    //[[UIBarButtonItem appearance] setTitleTextAttributes:attributes
+                                               // forState:UIControlStateNormal];
     
     [[self window] setRootViewController:[self drawerController]];
     [[self window] makeKeyAndVisible];
