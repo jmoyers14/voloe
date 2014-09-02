@@ -49,7 +49,6 @@
 		5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF419A2B90F003AA4EF /* VLTermsViewController.m */; };
 		5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */; };
 		5A77151C19AF9ADE000FF43D /* VLListItemGridCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A77151B19AF9ADE000FF43D /* VLListItemGridCell.xib */; };
-		5A77152019AF9FCF000FF43D /* VLListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A77151F19AF9FCF000FF43D /* VLListItemView.m */; };
 		5A9DE6AE19A7A46A00C89F23 /* blue-add.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63A19A7A46A00C89F23 /* blue-add.png */; };
 		5A9DE6AF19A7A46A00C89F23 /* blue-add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63B19A7A46A00C89F23 /* blue-add@2x.png */; };
 		5A9DE6B019A7A46A00C89F23 /* blue-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9DE63C19A7A46A00C89F23 /* blue-camera.png */; };
@@ -253,8 +252,6 @@
 		5A6F6CF619A2B97C003AA4EF /* VLCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLCenterViewController.h; sourceTree = "<group>"; };
 		5A6F6CF719A2B97C003AA4EF /* VLCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLCenterViewController.m; sourceTree = "<group>"; };
 		5A77151B19AF9ADE000FF43D /* VLListItemGridCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VLListItemGridCell.xib; sourceTree = "<group>"; };
-		5A77151E19AF9FCF000FF43D /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
-		5A77151F19AF9FCF000FF43D /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
 		5A9DE63A19A7A46A00C89F23 /* blue-add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-add.png"; sourceTree = "<group>"; };
 		5A9DE63B19A7A46A00C89F23 /* blue-add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-add@2x.png"; sourceTree = "<group>"; };
 		5A9DE63C19A7A46A00C89F23 /* blue-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-camera.png"; sourceTree = "<group>"; };
@@ -549,8 +546,6 @@
 			children = (
 				5A57411419ABEC2E00F4FC5C /* VLGridListTableViewCell.h */,
 				5A57411519ABEC2E00F4FC5C /* VLGridListTableViewCell.m */,
-				5A77151E19AF9FCF000FF43D /* VLListItemView.h */,
-				5A77151F19AF9FCF000FF43D /* VLListItemView.m */,
 			);
 			name = "Profile Grid View";
 			sourceTree = "<group>";
@@ -1089,7 +1084,6 @@
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
-				5A77152019AF9FCF000FF43D /* VLListItemView.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
 				9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */,
