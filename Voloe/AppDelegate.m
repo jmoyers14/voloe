@@ -45,6 +45,8 @@
     [colorManager setColor:UIColorFromRGB(0xDDEEFF) forKey:@"DrawerHeaderText"];
     [colorManager setColor:UIColorFromRGB(0x5D656F) forKey:@"DrawerCellBG"];
     [colorManager setColor:UIColorFromRGB(0x222222) forKey:@"DrawerCellSelectedBG"];
+    [colorManager setColor:UIColorFromRGB(0xFFFFFF) forKey:@"ListItemGridViewBG"];
+    [colorManager setColor:[UIColor lightGrayColor] forKey:@"ListItemGridViewSelectedBG"];
     
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 UIColorFromRGB(0x00aabc),NSForegroundColorAttributeName,

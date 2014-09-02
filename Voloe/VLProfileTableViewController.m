@@ -8,7 +8,6 @@
 
 #import "VLProfileTableViewController.h"
 #import "VLCenterViewController.h"
-#import "VLGridListTableViewCell.h"
 
 
 
@@ -160,6 +159,7 @@ typedef NS_ENUM(NSInteger, SortButton) {
         case SortButtonAll:
             [_allButton setSelected:YES];
             [_achievedButton setSelected:NO];
+            [_toBeButton setSelected:NO];
             break;
         case SortButtonAchieved:
             [_achievedButton setSelected: YES];
@@ -216,23 +216,24 @@ typedef NS_ENUM(NSInteger, SortButton) {
     NSInteger colTwo = ([indexPath row] * 3) + 1;
     NSInteger colThree = ([indexPath row] * 3) + 2;
     
+    [cell setDelegate:self];
     
     if (colOne < [_goals count]) {
-        [[cell colOneImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colOne]]];
+        [[[cell colOneView] imageView] setImage:[UIImage imageNamed:[_goals objectAtIndex:colOne]]];
     } else {
-        [[cell colOneImage] setHidden:YES];
+        [[cell colOneView] setHidden:YES];
     }
     
     if (colTwo < [_goals count]) {
-        [[cell colTwoImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colTwo]]];
+        [[[cell colTwoView] imageView] setImage:[UIImage imageNamed:[_goals objectAtIndex:colTwo]]];
     } else {
-        [[cell colTwoImage] setHidden:YES];
+        [[cell colTwoView] setHidden:YES];
     }
     
     if (colThree < [_goals count]) {
-        [[cell colThreeImage] setImage:[UIImage imageNamed:[_goals objectAtIndex:colThree]]];
+        [[[cell colThreeView] imageView] setImage:[UIImage imageNamed:[_goals objectAtIndex:colThree]]];
     } else {
-        [[cell colThreeImage] setHidden:YES];
+        [[cell colThreeView] setHidden:YES];
     }
     
     return cell;
@@ -301,5 +302,13 @@ typedef NS_ENUM(NSInteger, SortButton) {
             break;
     }
 }
+
+#pragma mark  - VLGridListTableViewCellDelegate methods
+
+- (void) listItemSelected:(NSString *)item {
+#warning - update method with listItem model
+    [self performSegueWithIdentifier:@"ListItemSelected" sender:self];
+}
+
 
 @end

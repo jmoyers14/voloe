@@ -182,6 +182,7 @@
 		9949411119AD1B89009BCC4B /* VLEditProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */; };
 		9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411319AD30B5009BCC4B /* VLEditGoalTableViewController.m */; };
 		9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */; };
+		9974D01D19B625A900706A5A /* VLListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974D01C19B625A900706A5A /* VLListItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -396,6 +397,8 @@
 		9949411319AD30B5009BCC4B /* VLEditGoalTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLEditGoalTableViewController.m; sourceTree = "<group>"; };
 		9949411519AD385D009BCC4B /* VLGalleryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLGalleryCollectionViewCell.h; sourceTree = "<group>"; };
 		9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGalleryCollectionViewCell.m; sourceTree = "<group>"; };
+		9974D01B19B625A900706A5A /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
+		9974D01C19B625A900706A5A /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -546,6 +549,8 @@
 			children = (
 				5A57411419ABEC2E00F4FC5C /* VLGridListTableViewCell.h */,
 				5A57411519ABEC2E00F4FC5C /* VLGridListTableViewCell.m */,
+				9974D01B19B625A900706A5A /* VLListItemView.h */,
+				9974D01C19B625A900706A5A /* VLListItemView.m */,
 			);
 			name = "Profile Grid View";
 			sourceTree = "<group>";
@@ -1084,6 +1089,7 @@
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
+				9974D01D19B625A900706A5A /* VLListItemView.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
 				9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */,

@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VLGridListTableViewCell.h"
 
-@interface VLProfileTableViewController : UITableViewController <UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface VLProfileTableViewController : UITableViewController <UIImagePickerControllerDelegate, UIActionSheetDelegate, UINavigationControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, VLGridListTAbleViewCellDelegate>
 @property (nonatomic, strong) IBOutlet UIImageView *profilePicture;
 @property (nonatomic, strong) IBOutlet UIButton *goalsButton;
 @property (nonatomic, strong) IBOutlet UIButton *goalsAchievedButton;

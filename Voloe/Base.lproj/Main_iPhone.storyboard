@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ktd-3r-Fes">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ktd-3r-Fes">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -581,9 +581,6 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                                     <state key="normal" title="Friends">
                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
-                                    <connections>
-                                        <segue destination="zg3-yz-ghN" kind="modal" id="eJS-yK-URD"/>
-                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0g-7f-zAR">
                                     <rect key="frame" x="208" y="10" width="66" height="30"/>
@@ -696,7 +693,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="137"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okS-XT-wbZ">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="okS-XT-wbZ" customClass="VLListItemView">
                                             <rect key="frame" x="5" y="2" width="100" height="135"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -732,8 +729,14 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <outlet property="commentsLabel" destination="lys-Ew-KUA" id="AOC-wY-okP"/>
+                                                <outlet property="imageView" destination="t5u-bT-Azd" id="rtR-eQ-u8B"/>
+                                                <outlet property="likesLabel" destination="2YD-SA-CaR" id="K34-t3-pBi"/>
+                                                <outlet property="titleLable" destination="Mdw-5J-jcV" id="vMc-Xc-ard"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VB0-Tb-1ML">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VB0-Tb-1ML" customClass="VLListItemView">
                                             <rect key="frame" x="110" y="2" width="100" height="135"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -769,8 +772,14 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <outlet property="commentsLabel" destination="Fk8-53-l66" id="YY2-Ir-SM2"/>
+                                                <outlet property="imageView" destination="Msu-x6-kSp" id="6UQ-TH-E1t"/>
+                                                <outlet property="likesLabel" destination="B12-OY-V4p" id="Vcg-cq-t4p"/>
+                                                <outlet property="titleLable" destination="iLd-8a-xSt" id="gXQ-2m-y6m"/>
+                                            </connections>
                                         </view>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysr-MN-MNP">
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ysr-MN-MNP" customClass="VLListItemView">
                                             <rect key="frame" x="215" y="2" width="100" height="135"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -805,15 +814,21 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <outlet property="commentsLabel" destination="ca9-P9-VeC" id="Z5U-bY-h9i"/>
+                                                <outlet property="imageView" destination="8cg-s4-Qep" id="MKK-4w-dj0"/>
+                                                <outlet property="likesLabel" destination="Wny-s7-XvZ" id="KSs-91-JIg"/>
+                                                <outlet property="titleLable" destination="U7y-HA-e90" id="Aji-AF-C0j"/>
+                                            </connections>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" red="0.86666666670000003" green="0.93333333330000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="colOneImage" destination="t5u-bT-Azd" id="yFn-Pr-yqe"/>
-                                    <outlet property="colThreeImage" destination="8cg-s4-Qep" id="eIy-Qi-bW3"/>
-                                    <outlet property="colTwoImage" destination="Msu-x6-kSp" id="O1l-wF-T0k"/>
+                                    <outlet property="colOneView" destination="okS-XT-wbZ" id="wmd-cS-Eh8"/>
+                                    <outlet property="colThreeView" destination="ysr-MN-MNP" id="zyz-00-Qwk"/>
+                                    <outlet property="colTwoView" destination="VB0-Tb-1ML" id="sWc-ew-BEC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -846,6 +861,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         <outlet property="profilePicture" destination="BMT-HC-yRF" id="Y5a-16-bli"/>
                         <outlet property="toBeButton" destination="GVp-LA-RWD" id="nwQ-uR-fBC"/>
                         <segue destination="Lq6-hI-aUz" kind="modal" identifier="EditProfile" id="8ej-BH-XKs"/>
+                        <segue destination="zg3-yz-ghN" kind="push" identifier="ListItemSelected" id="P0J-6z-eaN"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHa-df-kfU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1085,7 +1101,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="hdC-hx-EYH">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="162"/>
+                            <rect key="frame" x="0.0" y="64" width="320" height="162"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SomeText" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPY-uf-pnj">
@@ -1101,7 +1117,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                             <tableViewSection id="DDe-Ns-HHr">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="284" id="wu0-in-XUY">
-                                        <rect key="frame" x="0.0" y="162" width="320" height="284"/>
+                                        <rect key="frame" x="0.0" y="226" width="320" height="284"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wu0-in-XUY" id="kLf-Yg-fvC">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="283"/>
@@ -1152,6 +1168,7 @@ These Terms of Use affect your legal rights and obligations. If you do not agree
                             <outlet property="delegate" destination="zg3-yz-ghN" id="NmS-Yk-kpM"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="L7c-th-FFc"/>
                     <connections>
                         <outlet property="collectionView" destination="hnx-6j-tLi" id="Gsc-qK-abL"/>
                     </connections>

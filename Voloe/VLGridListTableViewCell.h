@@ -7,9 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VLListItemView.h"
+
+@protocol VLGridListTAbleViewCellDelegate <NSObject>
+
+@required
+#warning - update delegate methods with model
+- (void) listItemSelected:(NSString *)item;
+
+@end
 
 @interface VLGridListTableViewCell : UITableViewCell
-@property (nonatomic, strong) IBOutlet UIImageView *colOneImage;
-@property (nonatomic, strong) IBOutlet UIImageView *colTwoImage;
-@property (nonatomic, strong) IBOutlet UIImageView *colThreeImage;
+
+@property (nonatomic, strong) IBOutlet VLListItemView *colOneView;
+@property (nonatomic, strong) IBOutlet VLListItemView *colTwoView;
+@property (nonatomic, strong) IBOutlet VLListItemView *colThreeView;
+
+@property (nonatomic, weak) id<VLGridListTAbleViewCellDelegate> delegate;
+
 @end
