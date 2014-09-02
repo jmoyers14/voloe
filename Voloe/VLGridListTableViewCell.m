@@ -30,6 +30,24 @@ typedef NS_ENUM(NSInteger, VLColTag) {
 - (void)awakeFromNib
 {
     [self addButtons];
+    [self styleViews];
+}
+
+- (void) styleViews {
+    
+    [[[self colOneView] layer] setShadowColor:[[UIColor grayColor] CGColor]];
+    [[[self colOneView] layer] setShadowOffset:CGSizeMake(2.0, 2.0)];
+    [[[self colOneView] layer] setShadowOpacity:1.0];
+    [[[self colOneView] layer] setShadowRadius:5.0];
+    
+    [[[self colOneView] layer] setCornerRadius:5.0];
+    //[[[self colOneView] layer] setMasksToBounds:YES];
+    
+
+    
+    
+//    [[_colTwoView layer] setCornerRadius:20.0];
+//    [[_colThreeView layer] setCornerRadius:20.0];
 }
 
 - (void) addButtons {
