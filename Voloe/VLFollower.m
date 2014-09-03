@@ -10,4 +10,25 @@
 
 @implementation VLFollower
 
+
+//designated initializer
+- (id) initWithFollowingUserAliasToken:(NSString *)fuAliasToken
+                       followingUserID:(NSString *)fuID
+           follwingUserProfileImageKey:(NSString *)fuImageKey
+                followingUserWholeName:(NSString *)fuWholeName {
+    self = [super init];
+    if (self) {
+        _followingUserAliasToken = fuAliasToken;
+        _followingUserID = fuID;
+        _followingUserProfileImageKey = fuImageKey;
+        _followingUserWholeName = fuWholeName;
+    }
+    return self;
+}
+
+//call to designated initializer
+- (id) init {
+    return [self initWithFollowingUserAliasToken:nil followingUserID:nil follwingUserProfileImageKey:nil followingUserWholeName:nil];
+}
+
 @end

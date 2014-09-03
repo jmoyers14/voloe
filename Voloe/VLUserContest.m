@@ -10,4 +10,25 @@
 
 @implementation VLUserContest
 
+//designated initializer
+- (id) initWithID:(NSString *)ID
+       listItemID:(NSString *)listItemID
+           userID:(NSString *)userID
+         categoey:(NSString *)category {
+    self = [super init];
+    if (self) {
+        _ID = ID;
+        _listItemID = listItemID;
+        _userID = userID;
+        _category = category;
+    }
+    return self;
+}
+
+- (id) init {
+    //call designated initializer
+    return [self initWithID:nil listItemID:nil userID:nil categoey:nil];
+}
+
+
 @end

@@ -39,6 +39,10 @@
 @property (nonatomic, readwrite, strong) NSString *userAliasToken;
 @property (nonatomic, readwrite, strong) NSString *userVerificationKey;
 
+@property (nonatomic, readonly, assign) NSInteger listItemCount;
+@property (nonatomic, readonly, assign) NSInteger contestCount;
+@property (nonatomic, readonly, assign) NSInteger followerCount;
+@property (nonatomic, readonly, assign) NSInteger activityCount;
 
 
 //user settings
@@ -59,7 +63,6 @@
 
 // user list items
 - (void) addListItem:(VLListItem *)listItem;
-- (NSInteger) listItemCount;
 - (VLListItem *) listItemAtIndex:(NSInteger)index;
 - (NSInteger) indexOfListItem:(VLListItem *)listItem;
 - (void) deleteListItemAtIndex:(NSInteger)index;
@@ -67,7 +70,6 @@
 
 // contests
 - (void) addContest:(VLUserContest *)contest;
-- (NSInteger) contestCount;
 - (VLUserContest *) contestAtIndex:(NSInteger)index;
 - (NSInteger) indexOfContest:(VLUserContest *)contest;
 - (void) deleteContestAtIndex:(NSInteger)index;
@@ -75,7 +77,6 @@
 
 // followers
 - (void) addFollower:(VLFollower *)follower;
-- (NSInteger) folloerCount;
 - (VLFollower *) followerAtIndex:(NSInteger)index;
 - (NSInteger) indexOfFollower:(VLFollower *)follower;
 - (void) deleteFollowerAtIndex:(NSInteger)index;
@@ -83,7 +84,6 @@
 
 // activites
 - (void) addActivity:(VLActivity *)activity;
-- (NSInteger) activityCount;
 - (VLActivity *) activityAtIndex:(NSInteger)index;
 - (NSInteger) indexOfActivity:(VLActivity *)activity;
 
