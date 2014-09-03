@@ -35,12 +35,18 @@ typedef NS_ENUM(NSInteger, VLColTag) {
 
 - (void) styleViews {
     
+    [self styleView:_colOneView];
+    [self styleView:_colTwoView];
+    [self styleView:_colThreeView];
+    
+    /*
     [[[self colOneView] layer] setShadowColor:[[UIColor grayColor] CGColor]];
     [[[self colOneView] layer] setShadowOffset:CGSizeMake(2.0, 2.0)];
     [[[self colOneView] layer] setShadowOpacity:1.0];
     [[[self colOneView] layer] setShadowRadius:5.0];
     
     [[[self colOneView] layer] setCornerRadius:5.0];
+     */
     //[[[self colOneView] layer] setMasksToBounds:YES];
     
 
@@ -48,6 +54,15 @@ typedef NS_ENUM(NSInteger, VLColTag) {
     
 //    [[_colTwoView layer] setCornerRadius:20.0];
 //    [[_colThreeView layer] setCornerRadius:20.0];
+}
+
+- (void) styleView:(UIView *)view {
+    [[view layer] setShadowColor:[[UIColor grayColor] CGColor]];
+    [[view layer] setShadowOffset:CGSizeMake(0.5, 0.5)];
+    [[view layer] setShadowOpacity:1.0];
+    [[view layer] setShadowRadius:5.0];
+    
+    [[view layer] setCornerRadius:5.0];
 }
 
 - (void) addButtons {
