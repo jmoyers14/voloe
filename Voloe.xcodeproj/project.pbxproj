@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EBC6E1EECE0467CBED4A1CB /* libPods-VoloeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */; };
 		391D0C503C964F22B8E573C7 /* libPods-Voloe.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */; };
 		5A140D1119AE59A3001D0E60 /* male.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A140D0F19AE59A3001D0E60 /* male.png */; };
 		5A140D1219AE59A3001D0E60 /* male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A140D1019AE59A3001D0E60 /* male@2x.png */; };
@@ -399,6 +400,8 @@
 		9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		9974D01B19B625A900706A5A /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
 		9974D01C19B625A900706A5A /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
+		D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoloeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoloeTests.xcconfig"; path = "Pods/Pods-VoloeTests.xcconfig"; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -421,6 +424,7 @@
 				5AE5E1E9199F12E9007CDA0D /* XCTest.framework in Frameworks */,
 				5AE5E1EB199F12E9007CDA0D /* UIKit.framework in Frameworks */,
 				5AE5E1EA199F12E9007CDA0D /* Foundation.framework in Frameworks */,
+				1EBC6E1EECE0467CBED4A1CB /* libPods-VoloeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +567,7 @@
 				5AE5E1C5199F12E9007CDA0D /* Frameworks */,
 				5AE5E1C4199F12E9007CDA0D /* Products */,
 				7813ECD9320147EBA25ED9F1 /* Pods-Voloe.xcconfig */,
+				D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -583,6 +588,7 @@
 				5AE5E1CA199F12E9007CDA0D /* UIKit.framework */,
 				5AE5E1E8199F12E9007CDA0D /* XCTest.framework */,
 				F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */,
+				D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -594,13 +600,13 @@
 				5A41A6EE19A2B10900433337 /* Views */,
 				5AE5E1D5199F12E9007CDA0D /* AppDelegate.h */,
 				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
+				5A9DE72219A7B3E200C89F23 /* VLColorManager.h */,
+				5A9DE72319A7B3E200C89F23 /* VLColorManager.m */,
 				5AE5E202199F1472007CDA0D /* Models */,
 				5AE5E201199F1468007CDA0D /* Controllers */,
 				5A41A6EC19A2B0DC00433337 /* Catagories */,
 				5AE5E1E1199F12E9007CDA0D /* Images.xcassets */,
 				5AE5E1CD199F12E9007CDA0D /* Supporting Files */,
-				5A9DE72219A7B3E200C89F23 /* VLColorManager.h */,
-				5A9DE72319A7B3E200C89F23 /* VLColorManager.m */,
 			);
 			path = Voloe;
 			sourceTree = "<group>";
@@ -831,9 +837,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5AE5E1FB199F12E9007CDA0D /* Build configuration list for PBXNativeTarget "VoloeTests" */;
 			buildPhases = (
+				2A5968EA045143A5B7F7DAD3 /* Check Pods Manifest.lock */,
 				5AE5E1E3199F12E9007CDA0D /* Sources */,
 				5AE5E1E4199F12E9007CDA0D /* Frameworks */,
 				5AE5E1E5199F12E9007CDA0D /* Resources */,
+				F7C1FF7BC3F4478399FD941E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1039,6 +1047,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2A5968EA045143A5B7F7DAD3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		6161076A6FE142698E941D6C /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1067,6 +1090,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Pods-Voloe-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7C1FF7BC3F4478399FD941E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-VoloeTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1252,6 +1290,7 @@
 		};
 		5AE5E1FC199F12E9007CDA0D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1274,6 +1313,7 @@
 		};
 		5AE5E1FD199F12E9007CDA0D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Voloe.app/Voloe";
 				FRAMEWORK_SEARCH_PATHS = (

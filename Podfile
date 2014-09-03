@@ -3,9 +3,13 @@
 
 target "Voloe" do
 pod 'MMDrawerController', '~> 0.5.6'
+pod 'AWSiOSSDKv2'
+pod 'AWSCognitoSync'
 end
 
 target "VoloeTests" do
-
+pod 'MMDrawerController', '~> 0.5.6'
+pod 'AWSiOSSDKv2'
+pod 'AWSCognitoSync'
 end
 

@@ -1,0 +1,1 @@
+PODS_VOLOETESTS_MANTLE_OTHER_LDFLAGS = -framework Foundation
