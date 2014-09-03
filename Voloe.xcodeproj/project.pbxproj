@@ -179,7 +179,6 @@
 		5AE5E1EA199F12E9007CDA0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1C6199F12E9007CDA0D /* Foundation.framework */; };
 		5AE5E1EB199F12E9007CDA0D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AE5E1CA199F12E9007CDA0D /* UIKit.framework */; };
 		5AE5E1F3199F12E9007CDA0D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F1199F12E9007CDA0D /* InfoPlist.strings */; };
-		5AE5E1F5199F12E9007CDA0D /* VoloeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */; };
 		9949411119AD1B89009BCC4B /* VLEditProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */; };
 		9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411319AD30B5009BCC4B /* VLEditGoalTableViewController.m */; };
 		9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */; };
@@ -194,6 +193,7 @@
 		99B0CF6D19B7870A00501D6E /* VLNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6C19B7870A00501D6E /* VLNotification.m */; };
 		99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6F19B7871A00501D6E /* VLListItemImage.m */; };
 		99B0CF7319B7872900501D6E /* VLListItemComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7219B7872900501D6E /* VLListItemComment.m */; };
+		99B0CF7519B787A000501D6E /* VLUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7419B787A000501D6E /* VLUserTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,7 +400,6 @@
 		5AE5E1E8199F12E9007CDA0D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5AE5E1F0199F12E9007CDA0D /* VoloeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VoloeTests-Info.plist"; sourceTree = "<group>"; };
 		5AE5E1F2199F12E9007CDA0D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VoloeTests.m; sourceTree = "<group>"; };
 		7813ECD9320147EBA25ED9F1 /* Pods-Voloe.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voloe.xcconfig"; path = "Pods/Pods-Voloe.xcconfig"; sourceTree = "<group>"; };
 		9949410F19AD1B89009BCC4B /* VLEditProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLEditProfileTableViewController.h; sourceTree = "<group>"; };
 		9949411019AD1B89009BCC4B /* VLEditProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLEditProfileTableViewController.m; sourceTree = "<group>"; };
@@ -430,6 +429,7 @@
 		99B0CF6F19B7871A00501D6E /* VLListItemImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemImage.m; sourceTree = "<group>"; };
 		99B0CF7119B7872900501D6E /* VLListItemComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemComment.h; sourceTree = "<group>"; };
 		99B0CF7219B7872900501D6E /* VLListItemComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemComment.m; sourceTree = "<group>"; };
+		99B0CF7419B787A000501D6E /* VLUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserTests.m; sourceTree = "<group>"; };
 		D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoloeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoloeTests.xcconfig"; path = "Pods/Pods-VoloeTests.xcconfig"; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -655,8 +655,8 @@
 		5AE5E1EE199F12E9007CDA0D /* VoloeTests */ = {
 			isa = PBXGroup;
 			children = (
-				5AE5E1F4199F12E9007CDA0D /* VoloeTests.m */,
 				5AE5E1EF199F12E9007CDA0D /* Supporting Files */,
+				99B0CF7419B787A000501D6E /* VLUserTests.m */,
 			);
 			path = VoloeTests;
 			sourceTree = "<group>";
@@ -1206,7 +1206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AE5E1F5199F12E9007CDA0D /* VoloeTests.m in Sources */,
+				99B0CF7519B787A000501D6E /* VLUserTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,12 +6,20 @@
 //  Copyright (c) 2014 Jeremy Moyers. All rights reserved.
 //
 //
-//  The VLUser class is the core data model for the voloe mobile app.
-//  Access to all other data models can be accessed through the shared VLUser instance
-//  The VLUser instance is to be created at application launch after login
+//  VLUser class is used for representing:
+//  Main user - actor using the phone
+//  Interaction users - other voloe community memembers
+//
 
 
 #import <Foundation/Foundation.h>
+#import "VLListItem.h"
+#import "VLUserLike.h"
+#import "VLUserAssist.h"
+#import "VLUserContest.h"
+#import "VLFollower.h"
+#import "VLActivity.h"
+#import "VLNotification.h"
 
 @interface VLUser : NSObject
 
@@ -42,17 +50,57 @@
 @property (nonatomic, readwrite, assign) BOOL isEmailFlagged;
 @property (nonatomic, readwrite, assign) BOOL isVisitingFirstTime;
 
+//relationship attributes
+@property (nonatomic, readonly, strong) NSMutableArray *listItems;
+@property (nonatomic, readonly, strong) NSMutableArray *contests;
+@property (nonatomic, readonly, strong) NSMutableArray *followers;
+@property (nonatomic, readonly, strong) NSMutableArray *activities;
+@property (nonatomic, readonly, strong) NSMutableArray *notifications;
+
+// user list items
+- (void) addListItem:(VLListItem *)listItem;
+- (NSInteger) listItemCount;
+- (VLListItem *) listItemAtIndex:(NSInteger)index;
+- (NSInteger) indexOfListItem:(VLListItem *)listItem;
+- (void) deleteListItemAtIndex:(NSInteger)index;
+- (void) deleteListItem:(VLListItem *)listItem;
+
+// contests
+- (void) addContest:(VLUserContest *)contest;
+- (NSInteger) contestCount;
+- (VLUserContest *) contestAtIndex:(NSInteger)index;
+- (NSInteger) indexOfContest:(VLUserContest *)contest;
+- (void) deleteContestAtIndex:(NSInteger)index;
+- (void) deleteContest:(VLUserContest *)contest;
+
+// followers
+- (void) addFollower:(VLFollower *)follower;
+- (NSInteger) folloerCount;
+- (VLFollower *) followerAtIndex:(NSInteger)index;
+- (NSInteger) indexOfFollower:(VLFollower *)follower;
+- (void) deleteFollowerAtIndex:(NSInteger)index;
+- (void) deleteFollower:(VLFollower *)follower;
+
+// activites
+- (void) addActivity:(VLActivity *)activity;
+- (NSInteger) activityCount;
+- (VLActivity *) activityAtIndex:(NSInteger)index;
+- (NSInteger) indexOfActivity:(VLActivity *)activity;
+
+#warning - can activities be deleted??
+- (void) deleteActivityAtIndex:(NSInteger)index;
+- (void) deleteActivity:(VLActivity *)activity;
+// notifications
+
+//database keys
++ (NSArray *) dbKeys;
 
 
-//user model relations
+//initializers
+
+//designated initializer
+- (id) initWithDictionary:(NSDictionary *)dictionary;
 
 
-
-
-
-//singleton methods.
-//only one user per application, provides acce
-+ (id) sharedInstance;
-+ (BOOL) sharedInstanceExists;
 
 @end
