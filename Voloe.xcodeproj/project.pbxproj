@@ -184,6 +184,16 @@
 		9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411319AD30B5009BCC4B /* VLEditGoalTableViewController.m */; };
 		9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */; };
 		9974D01D19B625A900706A5A /* VLListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974D01C19B625A900706A5A /* VLListItemView.m */; };
+		99B0CF5719B77C1A00501D6E /* VLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5619B77C1A00501D6E /* VLUser.m */; };
+		99B0CF5A19B7869700501D6E /* VLListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5919B7869700501D6E /* VLListItem.m */; };
+		99B0CF5D19B786A600501D6E /* VLUserLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5C19B786A600501D6E /* VLUserLike.m */; };
+		99B0CF6019B786B600501D6E /* VLUserAssist.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5F19B786B600501D6E /* VLUserAssist.m */; };
+		99B0CF6319B786C400501D6E /* VLUserContest.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6219B786C400501D6E /* VLUserContest.m */; };
+		99B0CF6719B786E800501D6E /* VLFollower.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6619B786E800501D6E /* VLFollower.m */; };
+		99B0CF6A19B786FA00501D6E /* VLActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6919B786FA00501D6E /* VLActivity.m */; };
+		99B0CF6D19B7870A00501D6E /* VLNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6C19B7870A00501D6E /* VLNotification.m */; };
+		99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6F19B7871A00501D6E /* VLListItemImage.m */; };
+		99B0CF7319B7872900501D6E /* VLListItemComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7219B7872900501D6E /* VLListItemComment.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,6 +410,26 @@
 		9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		9974D01B19B625A900706A5A /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
 		9974D01C19B625A900706A5A /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
+		99B0CF5519B77C1A00501D6E /* VLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUser.h; sourceTree = "<group>"; };
+		99B0CF5619B77C1A00501D6E /* VLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUser.m; sourceTree = "<group>"; };
+		99B0CF5819B7869700501D6E /* VLListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItem.h; sourceTree = "<group>"; };
+		99B0CF5919B7869700501D6E /* VLListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItem.m; sourceTree = "<group>"; };
+		99B0CF5B19B786A600501D6E /* VLUserLike.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUserLike.h; sourceTree = "<group>"; };
+		99B0CF5C19B786A600501D6E /* VLUserLike.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserLike.m; sourceTree = "<group>"; };
+		99B0CF5E19B786B600501D6E /* VLUserAssist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUserAssist.h; sourceTree = "<group>"; };
+		99B0CF5F19B786B600501D6E /* VLUserAssist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserAssist.m; sourceTree = "<group>"; };
+		99B0CF6119B786C400501D6E /* VLUserContest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUserContest.h; sourceTree = "<group>"; };
+		99B0CF6219B786C400501D6E /* VLUserContest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserContest.m; sourceTree = "<group>"; };
+		99B0CF6519B786E800501D6E /* VLFollower.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLFollower.h; sourceTree = "<group>"; };
+		99B0CF6619B786E800501D6E /* VLFollower.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLFollower.m; sourceTree = "<group>"; };
+		99B0CF6819B786FA00501D6E /* VLActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLActivity.h; sourceTree = "<group>"; };
+		99B0CF6919B786FA00501D6E /* VLActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLActivity.m; sourceTree = "<group>"; };
+		99B0CF6B19B7870A00501D6E /* VLNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLNotification.h; sourceTree = "<group>"; };
+		99B0CF6C19B7870A00501D6E /* VLNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLNotification.m; sourceTree = "<group>"; };
+		99B0CF6E19B7871A00501D6E /* VLListItemImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemImage.h; sourceTree = "<group>"; };
+		99B0CF6F19B7871A00501D6E /* VLListItemImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemImage.m; sourceTree = "<group>"; };
+		99B0CF7119B7872900501D6E /* VLListItemComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemComment.h; sourceTree = "<group>"; };
+		99B0CF7219B7872900501D6E /* VLListItemComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemComment.m; sourceTree = "<group>"; };
 		D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoloeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoloeTests.xcconfig"; path = "Pods/Pods-VoloeTests.xcconfig"; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -656,6 +686,26 @@
 		5AE5E202199F1472007CDA0D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				99B0CF5519B77C1A00501D6E /* VLUser.h */,
+				99B0CF5619B77C1A00501D6E /* VLUser.m */,
+				99B0CF5819B7869700501D6E /* VLListItem.h */,
+				99B0CF5919B7869700501D6E /* VLListItem.m */,
+				99B0CF5B19B786A600501D6E /* VLUserLike.h */,
+				99B0CF5C19B786A600501D6E /* VLUserLike.m */,
+				99B0CF5E19B786B600501D6E /* VLUserAssist.h */,
+				99B0CF5F19B786B600501D6E /* VLUserAssist.m */,
+				99B0CF6119B786C400501D6E /* VLUserContest.h */,
+				99B0CF6219B786C400501D6E /* VLUserContest.m */,
+				99B0CF6519B786E800501D6E /* VLFollower.h */,
+				99B0CF6619B786E800501D6E /* VLFollower.m */,
+				99B0CF6819B786FA00501D6E /* VLActivity.h */,
+				99B0CF6919B786FA00501D6E /* VLActivity.m */,
+				99B0CF6B19B7870A00501D6E /* VLNotification.h */,
+				99B0CF6C19B7870A00501D6E /* VLNotification.m */,
+				99B0CF6E19B7871A00501D6E /* VLListItemImage.h */,
+				99B0CF6F19B7871A00501D6E /* VLListItemImage.m */,
+				99B0CF7119B7872900501D6E /* VLListItemComment.h */,
+				99B0CF7219B7872900501D6E /* VLListItemComment.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -1115,6 +1165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A57411619ABEC2E00F4FC5C /* VLGridListTableViewCell.m in Sources */,
+				99B0CF5D19B786A600501D6E /* VLUserLike.m in Sources */,
 				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
 				5A6F6CD119A2B82A003AA4EF /* VLProfileTableViewController.m in Sources */,
 				5A6F6CF219A2B8FE003AA4EF /* VLPrivacyViewController.m in Sources */,
@@ -1123,20 +1174,29 @@
 				5A6F6CE919A2B8C2003AA4EF /* VLSettingsTableViewController.m in Sources */,
 				5A6F6CDD19A2B864003AA4EF /* VLMessagesTableViewController.m in Sources */,
 				5AACFBF819A2C7BE003D9504 /* VLDrawerTableViewCell.m in Sources */,
+				99B0CF7319B7872900501D6E /* VLListItemComment.m in Sources */,
 				9949411119AD1B89009BCC4B /* VLEditProfileTableViewController.m in Sources */,
 				5A41A6EB19A26C0400433337 /* VLDrawerTableViewController.m in Sources */,
 				5AACFBF519A2BE6C003D9504 /* VLFollowersTableViewController.m in Sources */,
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
+				99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */,
 				9974D01D19B625A900706A5A /* VLListItemView.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
+				99B0CF6D19B7870A00501D6E /* VLNotification.m in Sources */,
 				9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */,
+				99B0CF6719B786E800501D6E /* VLFollower.m in Sources */,
 				5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */,
 				9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */,
+				99B0CF5A19B7869700501D6E /* VLListItem.m in Sources */,
+				99B0CF6A19B786FA00501D6E /* VLActivity.m in Sources */,
 				5A6F6CE019A2B875003AA4EF /* VLGoalsTableViewController.m in Sources */,
 				5A9DE72419A7B3E200C89F23 /* VLColorManager.m in Sources */,
 				5A6F6CEC19A2B8CD003AA4EF /* VLSupportTableViewController.m in Sources */,
+				99B0CF6019B786B600501D6E /* VLUserAssist.m in Sources */,
+				99B0CF5719B77C1A00501D6E /* VLUser.m in Sources */,
 				5A6F6CD719A2B845003AA4EF /* VLNotificationTableViewController.m in Sources */,
+				99B0CF6319B786C400501D6E /* VLUserContest.m in Sources */,
 				5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */,
 				5A6F6CD419A2B838003AA4EF /* VLManageTableViewController.m in Sources */,
 			);
