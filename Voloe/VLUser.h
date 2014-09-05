@@ -20,19 +20,29 @@
 #import "VLFollower.h"
 #import "VLActivity.h"
 #import "VLNotification.h"
+#import "DynamoDB.h"
+#import "VLConstants.h"
+
+
+typedef NS_ENUM(NSInteger, VLGender) {
+    VLGenderMale,
+    VLGenderFemale,
+    VLGenderOther
+};
 
 @interface VLUser : NSObject
 
 //user attributes
-@property (nonatomic, readonly, strong)  NSNumber *userId;
+@property (nonatomic, readonly, strong)  NSString *userId;
 @property (nonatomic, readwrite, strong) NSString *bioText;
 @property (nonatomic, readonly, strong)  NSDate *dateCreated;
 @property (nonatomic, readwrite, strong) NSDate *dob;
 @property (nonatomic, readwrite, strong) NSString *emailAddress;
 @property (nonatomic, readwrite, strong) NSString *firstName;
+@property (nonatomic, readwrite, strong) NSString *lastName;
 @property (nonatomic, readwrite, strong) NSString *wholeName;
 @property (nonatomic, readwrite, strong) NSString *zipcode;
-@property (nonatomic, readwrite, strong) NSString *gender;
+@property (nonatomic, readwrite, assign) VLGender gender;
 @property (nonatomic, readwrite, strong) NSString *location;
 @property (nonatomic, readwrite, strong) NSString *mobile;
 @property (nonatomic, readwrite, strong) NSString *profileImageKey;
@@ -60,6 +70,15 @@
 @property (nonatomic, readonly, strong) NSMutableArray *followers;
 @property (nonatomic, readonly, strong) NSMutableArray *activities;
 @property (nonatomic, readonly, strong) NSMutableArray *notifications;
+
+
+
+
+
+
+
+
+
 
 // user list items
 - (void) addListItem:(VLListItem *)listItem;
@@ -99,8 +118,28 @@
 //initializers
 
 //designated initializer
-- (id) initWithDictionary:(NSDictionary *)dictionary;
+- (id) initWithEmail:(NSString *)email;
 
 
+- (id) initWithID:(NSString *)ID
+          bioText:(NSString *)bioText
+     emailAddress:(NSString *)emailAddress
+        firstName:(NSString *)firstName
+         lastName:(NSString *)lastName
+        wholeName:(NSString *)wholeName
+          zipcode:(NSString *)zipcode
+           gender:(VLGender)gender
+         location:(NSString *)location
+           mobile:(NSString *)mobile
+  profileImageKey:(NSString *)profileImageKey
+   userAliasToken:(NSString *)userAliasToken
+userVerificationKey:(NSString *)userVerficationKey
+  allowsFollowers:(BOOL)allowFollowers
+allowsFriendRequests:(BOOL)allowFriendRequests
+autoshareFacebook:(BOOL)autoshareFacebook
+          hideDOB:(BOOL)hideDOB
+     hideLocation:(BOOL)hideLocation
+   isEmailFlagged:(BOOL)isEmailFlagged
+isVisitingFirstTime:(BOOL)isVisitingFirstTime;
 
 @end

@@ -10,11 +10,15 @@
 #import "VLCenterViewController.h"
 #import "VLLoungeTableViewCell.h"
 #import "AWSCore.h"
-#import "DynamoDB.h"
+#import "VLAWSDBManager.h"
+#import "VLConstants.h"
+#import "VLUser.h"
+#import "VLDataFormatter.h"
 
 
 @interface VLLoungeTableViewController () {
     NSMutableArray *_testImages;
+    VLUser *_user;
 }
 
 @end
@@ -26,147 +30,92 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    /*
-    AWSCognitoCredentialsProvider *credentialsProvider = [[[AWSServiceManager defaultServiceManager] defaultServiceConfiguration] credentialsProvider];
-    AWSServiceConfiguration *configuration = [AWSServiceConfiguration configurationWithRegion:AWSRegionUSEast1 credentialsProvider:credentialsProvider];
-    AWSDynamoDB *db = [[AWSDynamoDB new] initWithConfiguration:configuration];
-    */
-    // get a client with the specified config
-    
-    AWSCognitoCredentialsProvider *credentialsProvider = [AWSCognitoCredentialsProvider
-                                                          credentialsWithRegionType:AWSRegionUSWest1
-                                                          accountId:@"603022141290"
-                                                          identityPoolId:@"us-east-1:e8fc3065-e3f5-41c4-a3ed-998ee4d1c645"
-                                                          unauthRoleArn:@"arn:aws:iam::603022141290:role/Cognito_voloe_com_v3Unauth_DefaultRole"
-                                                          authRoleArn:@"arn:aws:iam::603022141290:role/Cognito_voloe_com_v3Auth_DefaultRole"];
-    
-    AWSServiceConfiguration *configuration = [AWSServiceConfiguration configurationWithRegion:AWSRegionUSWest1
-                                                                          credentialsProvider:credentialsProvider];
-    
-    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
-    
-    AWSDynamoDB *db = [AWSDynamoDB defaultDynamoDB];
-
-    
-
-    
-    AWSDynamoDBGetItemInput *getItemInput = [[AWSDynamoDBGetItemInput alloc] init];
-    [getItemInput setTableName:@"voloe-com-users"];
-
-    AWSDynamoDBAttributeValue *emailAddress = [[AWSDynamoDBAttributeValue alloc] init];
-    [emailAddress setS:@"jmoyers14@gmail.com"];
-    
-    
-    
-    
-    [getItemInput setKey:[NSDictionary dictionaryWithObject:emailAddress forKey:@"emailAddress"]];
-    
-
-    
-    [getItemInput setAttributesToGet:@[@"wholeName"]];
-    
-    BFTask *task = [db getItem:getItemInput];
-   
-    
-
-    
-    [task continueWithExecutor:[BFExecutor mainThreadExecutor] withBlock:^id(BFTask *task) {
-    
-        if ([task error]) {
-            NSLog(@"%@", [[task error] localizedDescription]);
-        }
-        AWSDynamoDBGetItemOutput *output = [task result];
-        
-        AWSDynamoDBAttributeValue *name = [output valueForKey:@"wholeName"];
-        
-        NSLog(@"%@", [name S]);
-        
-        return nil;
-    }];
-    
-    
-    
-    /*
-    AWSDynamoDBCondition *condition = [[AWSDynamoDBCondition alloc] init];
-
-    [condition setComparisonOperator:AWSDynamoDBComparisonOperatorEQ];
-
-    AWSDynamoDBAttributeValue *email = [[AWSDynamoDBAttributeValue alloc] init];
-    [email setS:@"jmoyers14@gmail.com"];
-    
-    [condition setAttributeValueList:[NSArray arrayWithObject:email]];
-
-    NSMutableDictionary *queryStartKey = nil;
-
-
-
-    AWSDynamoDBQueryInput *queryInput = [[AWSDynamoDBQueryInput alloc] init];
-    [queryInput setTableName:@"voloe-com-users"];
-    [queryInput setExclusiveStartKey:queryStartKey];
-    [queryInput setKeyConditions:[NSMutableDictionary dictionaryWithObject:condition forKey:@"emailAddress"]];
-    
-    BFTask *task2 = [db query:queryInput];
-
-    
-    [task2 continueWithExecutor:[BFExecutor mainThreadExecutor] withBlock:^id(BFTask *task) {
-        
-        if ([task error]) {
-            NSLog(@"%@", [[task error] description]);
-        }
-        AWSDynamoDBQueryOutput *output = [task result];
-        
-        for (NSDictionary *item in [output items]) {
-            AWSDynamoDBAttributeValue *name = [item objectForKey:@"wholeName"];
-            NSLog(@"name: %@", name.S);
-        }
-        
-        
-        return nil;
-    }];
-    */
-    
-    
-    // See if the test table exists.
-    /*
-    AWSDynamoDBDescribeTableInput *describeTableInput = [AWSDynamoDBDescribeTableInput new];
-    [describeTableInput setTableName:@"voloe-com-users"];
-
-    
-    AWSDynamoDBListTablesInput *list = [AWSDynamoDBListTablesInput new];
-
-    
-    
-    
-    [[db listTables:list]
-     continueWithExecutor:[BFExecutor mainThreadExecutor] withBlock:^id(BFTask *task) {
-         if ([task error]) {
-             NSLog(@"%@", [[task error] description]);
-         }
-
-         AWSDynamoDBListTablesOutput *output = [task result];
-         for (NSString *name in [output tableNames]) {
-             NSLog(@"%@", name);
-         }
-         
-         // If the test table doesn't exist, create one.
-         if ([task.error.domain isEqualToString:AWSDynamoDBErrorDomain] && task.error.code == AWSDynamoDBErrorResourceNotFound) {
-             NSLog(@"Table not found");
-         }
-         
-         return nil;
-     }];
-
-
-    
-   */
-    
-  
     
     _testImages = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++) {
         [_testImages addObject:[UIImage imageNamed:[NSString stringWithFormat:@"image%d.png", i]]];
     }
+    
+    [self loadData];
+    
 }
+
+- (void) loadData {
+    //query default user
+    AWSDynamoDBCondition *condition = [VLAWSDBManager conditionWithComparison:AWSDynamoDBComparisonOperatorEQ
+                                                                    andValues:@[@"jmoyers14@gmail.com"]];
+    
+    NSDictionary *scanFilter = [NSDictionary dictionaryWithObjectsAndKeys:condition, @"emailAddress", nil];
+    
+    [[[VLAWSDBManager scanTable:AWSDynamoDBUsersTableName withFilter:scanFilter andOperator:AWSDynamoDBConditionalOperatorAnd] continueWithSuccessBlock:^id(BFTask *task) {
+
+        AWSDynamoDBScanOutput *output = [task result];
+        
+        if ([[output items] count] > 1) {
+            NSLog(@"More than one user returned");
+            return nil;
+        } else {
+            
+            //build the monster of a user object
+            NSDictionary *userData = [[output items] objectAtIndex:0];
+            
+            _user = [[VLUser alloc] initWithID:[[userData objectForKey:@"ID"] S]
+                                       bioText:[[userData objectForKey:@"bioText"] S]
+                                  emailAddress:[[userData objectForKey:@"emailAddress"] S]
+                                     firstName:[[userData objectForKey:@"firstName"] S]
+                                      lastName:[[userData objectForKey:@"lastName"] S]
+                                     wholeName:[[userData objectForKey:@"wholeName"] S]
+                                       zipcode:[[userData objectForKey:@"zipcode"] S]
+                                        gender:[VLDataFormatter genderFromString:[[userData objectForKey:@"gender"] S]]
+                                      location:[[userData objectForKey:@"location"] S]
+                                        mobile:[[userData objectForKey:@"mobile"] S]
+                               profileImageKey:[[userData objectForKey:@"profileImageKey"] S]
+                                userAliasToken:[[userData objectForKey:@"userAliasToken"] S]
+                           userVerificationKey:[[userData objectForKey:@"userVerificationKey"] S]
+                               allowsFollowers:[VLDataFormatter boolFromString:[[userData objectForKey:@"allowFollowers"] S]]
+                          allowsFriendRequests:[VLDataFormatter boolFromString:[[userData objectForKey:@"allowFriendRequests"] S]]
+                             autoshareFacebook:[VLDataFormatter boolFromString:[[userData objectForKey:@"autoshareFacebook"] S]]
+                                       hideDOB:[VLDataFormatter boolFromString:[[userData objectForKey:@"hideDob"] S]]
+                                  hideLocation:[VLDataFormatter boolFromString:[[userData objectForKey:@"hideLocation"] S]]
+                                isEmailFlagged:[VLDataFormatter boolFromString:[[userData objectForKey:@"isEmailFlagged"] S]]
+                           isVisitingFirstTime:[VLDataFormatter boolFromString:[[userData objectForKey:@"isVisitingFirstTime"] S]]];
+            
+            
+        }
+        
+        NSLog(@"%@", [_user wholeName]);
+        
+        
+        
+        AWSDynamoDBCondition *acceptingUserIdCondition = [VLAWSDBManager conditionWithComparison:AWSDynamoDBComparisonOperatorEQ
+                                                                                       andValues:[NSArray arrayWithObject:[_user userId]]];
+        AWSDynamoDBCondition *isPendingCondition       = [VLAWSDBManager conditionWithComparison:AWSDynamoDBComparisonOperatorEQ
+                                                                                       andValues:[NSArray arrayWithObject:@"no"]];
+        AWSDynamoDBCondition *requestingUserId         = [VLAWSDBManager conditionWithComparison:AWSDynamoDBComparisonOperatorEQ
+                                                                                       andValues:[NSArray arrayWithObject:[_user userId]]];
+        
+        NSDictionary *filter = [NSDictionary dictionaryWithObjectsAndKeys:acceptingUserIdCondition, @"acceptingUserId", isPendingCondition, @"isPending", requestingUserId, @"requestingUserId", nil];
+        
+        
+        
+        return [VLAWSDBManager scanTable:AWSDynamoDBUserConnectionsTableName withFilter:filter andOperator:AWSDynamoDBConditionalOperatorOr];
+    }] continueWithExecutor:[BFExecutor mainThreadExecutor] withBlock:^id(BFTask *task) {
+        NSError *error = [task error];
+        if (error) {
+            NSLog(@"error");
+        }
+        
+        NSLog(@"no error");
+        
+        return nil;
+    }];
+
+    
+
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

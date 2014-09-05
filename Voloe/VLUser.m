@@ -11,25 +11,68 @@
 @implementation VLUser
 
 
-static VLUser *myInstance = nil;
-/*
-NSMutableArray *_listItems;
-NSMutableArray *_contests;
-NSMutableArray *_followers;
-NSMutableArray *_activities;
-NSMutableArray *_notifications;
-*/
-
 @synthesize listItems     = _listItems;
 @synthesize contests      = _contests;
 @synthesize followers     = _followers;
 @synthesize activities    = _activities;
 @synthesize notifications = _notifications;
 
+
+//giant initializer with ever field
+- (id) initWithID:(NSString *)ID
+          bioText:(NSString *)bioText
+     emailAddress:(NSString *)emailAddress
+        firstName:(NSString *)firstName
+         lastName:(NSString *)lastName
+        wholeName:(NSString *)wholeName
+          zipcode:(NSString *)zipcode
+           gender:(VLGender)gender
+         location:(NSString *)location
+           mobile:(NSString *)mobile
+  profileImageKey:(NSString *)profileImageKey
+   userAliasToken:(NSString *)userAliasToken
+userVerificationKey:(NSString *)userVerficationKey
+  allowsFollowers:(BOOL)allowFollowers
+allowsFriendRequests:(BOOL)allowFriendRequests
+autoshareFacebook:(BOOL)autoshareFacebook
+          hideDOB:(BOOL)hideDOB
+     hideLocation:(BOOL)hideLocation
+   isEmailFlagged:(BOOL)isEmailFlagged
+isVisitingFirstTime:(BOOL)isVisitingFirstTime {
+    
+    self = [self initWithEmail:emailAddress];
+    
+    if (self) {
+        _bioText             = bioText;
+        _lastName            = lastName;
+        _firstName           = firstName;
+        _wholeName           = wholeName;
+        _zipcode             = zipcode;
+        _gender              = gender;
+        _location            = location;
+        _mobile              = mobile;
+        _profileImageKey     = profileImageKey;
+        _userAliasToken      = userAliasToken;
+        _userVerificationKey = userVerficationKey;
+        _allowFollowers      = allowFollowers;
+        _allowFriendRequests = allowFriendRequests;
+        _autoshareFacebook   = autoshareFacebook;
+        _hideDOB             = hideDOB;
+        _hideLocation        = hideLocation;
+        _isEmailFlagged      = isEmailFlagged;
+        _isVisitingFirstTime = isVisitingFirstTime;
+    }
+    return self;
+}
+
+
+
+
 //designated initializer
-- (id) initWithDictionary:(NSDictionary *)dictionary {
+- (id) initWithEmail:(NSString *)email {
     self = [super init];
     if (self) {
+        _emailAddress  = email;
         _listItems     = [[NSMutableArray alloc] init];
         _contests      = [[NSMutableArray alloc] init];
         _followers     = [[NSMutableArray alloc] init];
@@ -40,8 +83,12 @@ NSMutableArray *_notifications;
 }
 
 - (id) init {
-    return [self initWithDictionary:nil];
+    return [self initWithEmail:nil];
 }
+
++ (NSArray *) dbKeys {
+    return [NSArray arrayWithObjects:@"", nil];
+};
 
 #pragma mark - listItems
 

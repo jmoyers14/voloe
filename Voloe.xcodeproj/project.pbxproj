@@ -183,6 +183,7 @@
 		9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411319AD30B5009BCC4B /* VLEditGoalTableViewController.m */; };
 		9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */; };
 		9974D01D19B625A900706A5A /* VLListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9974D01C19B625A900706A5A /* VLListItemView.m */; };
+		99AD900B19BA160D000C38D6 /* VLConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 99AD900A19BA160D000C38D6 /* VLConstants.m */; };
 		99B0CF5719B77C1A00501D6E /* VLUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5619B77C1A00501D6E /* VLUser.m */; };
 		99B0CF5A19B7869700501D6E /* VLListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5919B7869700501D6E /* VLListItem.m */; };
 		99B0CF5D19B786A600501D6E /* VLUserLike.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF5C19B786A600501D6E /* VLUserLike.m */; };
@@ -194,6 +195,8 @@
 		99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6F19B7871A00501D6E /* VLListItemImage.m */; };
 		99B0CF7319B7872900501D6E /* VLListItemComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7219B7872900501D6E /* VLListItemComment.m */; };
 		99B0CF7519B787A000501D6E /* VLUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7419B787A000501D6E /* VLUserTests.m */; };
+		99F8E0BA19BA4F5E002AB370 /* VLAWSDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F8E0B919BA4F5E002AB370 /* VLAWSDBManager.m */; };
+		99F8E0BD19BA6EBD002AB370 /* VLDataFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F8E0BC19BA6EBD002AB370 /* VLDataFormatter.m */; };
 		99FAAE3D19B8E7F400B7997D /* VLLoungeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAAE3C19B8E7F400B7997D /* VLLoungeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
@@ -410,6 +413,8 @@
 		9949411619AD385D009BCC4B /* VLGalleryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLGalleryCollectionViewCell.m; sourceTree = "<group>"; };
 		9974D01B19B625A900706A5A /* VLListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemView.h; sourceTree = "<group>"; };
 		9974D01C19B625A900706A5A /* VLListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemView.m; sourceTree = "<group>"; };
+		99AD900919BA160D000C38D6 /* VLConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLConstants.h; sourceTree = "<group>"; };
+		99AD900A19BA160D000C38D6 /* VLConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLConstants.m; sourceTree = "<group>"; };
 		99B0CF5519B77C1A00501D6E /* VLUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLUser.h; sourceTree = "<group>"; };
 		99B0CF5619B77C1A00501D6E /* VLUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUser.m; sourceTree = "<group>"; };
 		99B0CF5819B7869700501D6E /* VLListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItem.h; sourceTree = "<group>"; };
@@ -431,6 +436,10 @@
 		99B0CF7119B7872900501D6E /* VLListItemComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemComment.h; sourceTree = "<group>"; };
 		99B0CF7219B7872900501D6E /* VLListItemComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemComment.m; sourceTree = "<group>"; };
 		99B0CF7419B787A000501D6E /* VLUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserTests.m; sourceTree = "<group>"; };
+		99F8E0B819BA4F5E002AB370 /* VLAWSDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLAWSDBManager.h; sourceTree = "<group>"; };
+		99F8E0B919BA4F5E002AB370 /* VLAWSDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLAWSDBManager.m; sourceTree = "<group>"; };
+		99F8E0BB19BA6EBD002AB370 /* VLDataFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLDataFormatter.h; sourceTree = "<group>"; };
+		99F8E0BC19BA6EBD002AB370 /* VLDataFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLDataFormatter.m; sourceTree = "<group>"; };
 		99FAAE3B19B8E7F400B7997D /* VLLoungeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLLoungeTableViewCell.h; sourceTree = "<group>"; };
 		99FAAE3C19B8E7F400B7997D /* VLLoungeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLLoungeTableViewCell.m; sourceTree = "<group>"; };
 		D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoloeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -637,6 +646,12 @@
 				5AE5E1D6199F12E9007CDA0D /* AppDelegate.m */,
 				5A9DE72219A7B3E200C89F23 /* VLColorManager.h */,
 				5A9DE72319A7B3E200C89F23 /* VLColorManager.m */,
+				99AD900919BA160D000C38D6 /* VLConstants.h */,
+				99AD900A19BA160D000C38D6 /* VLConstants.m */,
+				99F8E0B819BA4F5E002AB370 /* VLAWSDBManager.h */,
+				99F8E0B919BA4F5E002AB370 /* VLAWSDBManager.m */,
+				99F8E0BB19BA6EBD002AB370 /* VLDataFormatter.h */,
+				99F8E0BC19BA6EBD002AB370 /* VLDataFormatter.m */,
 				5AE5E202199F1472007CDA0D /* Models */,
 				5AE5E201199F1468007CDA0D /* Controllers */,
 				5A41A6EC19A2B0DC00433337 /* Catagories */,
@@ -1187,10 +1202,12 @@
 				5A6F6CCE19A2B81D003AA4EF /* VLGuideTableViewController.m in Sources */,
 				99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */,
 				9974D01D19B625A900706A5A /* VLListItemView.m in Sources */,
+				99AD900B19BA160D000C38D6 /* VLConstants.m in Sources */,
 				5AE5E1D3199F12E9007CDA0D /* main.m in Sources */,
 				5A6F6CF819A2B97C003AA4EF /* VLCenterViewController.m in Sources */,
 				99B0CF6D19B7870A00501D6E /* VLNotification.m in Sources */,
 				9949411419AD30B5009BCC4B /* VLEditGoalTableViewController.m in Sources */,
+				99F8E0BD19BA6EBD002AB370 /* VLDataFormatter.m in Sources */,
 				99B0CF6719B786E800501D6E /* VLFollower.m in Sources */,
 				5A6F6CC519A2B2A2003AA4EF /* VLLoungeTableViewController.m in Sources */,
 				9949411719AD385D009BCC4B /* VLGalleryCollectionViewCell.m in Sources */,
@@ -1205,6 +1222,7 @@
 				99B0CF6319B786C400501D6E /* VLUserContest.m in Sources */,
 				5A6F6CF519A2B90F003AA4EF /* VLTermsViewController.m in Sources */,
 				5A6F6CD419A2B838003AA4EF /* VLManageTableViewController.m in Sources */,
+				99F8E0BA19BA4F5E002AB370 /* VLAWSDBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

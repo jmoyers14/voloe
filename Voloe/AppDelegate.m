@@ -44,7 +44,17 @@
     
     
     //obtain AWS credentials
-
+    AWSCognitoCredentialsProvider *credentialsProvider = [AWSCognitoCredentialsProvider
+                                                          credentialsWithRegionType:AWSRegionUSEast1
+                                                          accountId:@"603022141290"
+                                                          identityPoolId:@"us-east-1:e8fc3065-e3f5-41c4-a3ed-998ee4d1c645"
+                                                          unauthRoleArn:@"arn:aws:iam::603022141290:role/Cognito_voloe_com_v3Unauth_DefaultRole"
+                                                          authRoleArn:@"arn:aws:iam::603022141290:role/Cognito_voloe_com_v3Auth_DefaultRole"];
+    
+    AWSServiceConfiguration *configuration = [AWSServiceConfiguration configurationWithRegion:AWSRegionUSWest1
+                                                                          credentialsProvider:credentialsProvider];
+    
+    [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
     
 
     /*
