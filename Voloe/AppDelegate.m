@@ -10,6 +10,8 @@
 #import "MMDrawerController.h"
 #import "VLColorManager.h"
 
+#import "AWSCore.h"
+#import "Cognito.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) MMDrawerController *drawerController;
@@ -39,6 +41,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
 
+    
+    
+    //obtain AWS credentials
+
+    
+
+    /*
+    AWSCognito *syncClient = [AWSCognito defaultCognito];
+    AWSCognitoDataset *dataset = [syncClient openOrCreateDataset:@"myDataset"];
+    [dataset setString:@"myValue" forKey:@"myKey"];
+    [dataset synchronize];
+    */
     //initialize color manager
     VLColorManager *colorManager = [VLColorManager sharedInstance];
     [colorManager setColor:UIColorFromRGB(0x3D454F) forKey:@"DrawerHeader"];

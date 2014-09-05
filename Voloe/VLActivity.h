@@ -18,7 +18,7 @@
 @property (nonatomic, readonly, strong) NSString *commentedByUserID;
 @property (nonatomic, readonly, strong) NSString *description;
 @property (nonatomic, readonly, strong) NSString *imageID;
-@property (nonatomic, readonly, strong) NSNumber *likes;
+@property (nonatomic, readonly, strong) NSString *likes;
 @property (nonatomic, readonly, strong) NSString *profilePhotoImageKey;
 @property (nonatomic, readonly, strong) NSString *thumbnailImageKey;
 @property (nonatomic, readonly, strong) NSString *title;

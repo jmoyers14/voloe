@@ -194,6 +194,7 @@
 		99B0CF7019B7871A00501D6E /* VLListItemImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF6F19B7871A00501D6E /* VLListItemImage.m */; };
 		99B0CF7319B7872900501D6E /* VLListItemComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7219B7872900501D6E /* VLListItemComment.m */; };
 		99B0CF7519B787A000501D6E /* VLUserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 99B0CF7419B787A000501D6E /* VLUserTests.m */; };
+		99FAAE3D19B8E7F400B7997D /* VLLoungeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99FAAE3C19B8E7F400B7997D /* VLLoungeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -430,6 +431,8 @@
 		99B0CF7119B7872900501D6E /* VLListItemComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLListItemComment.h; sourceTree = "<group>"; };
 		99B0CF7219B7872900501D6E /* VLListItemComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLListItemComment.m; sourceTree = "<group>"; };
 		99B0CF7419B787A000501D6E /* VLUserTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLUserTests.m; sourceTree = "<group>"; };
+		99FAAE3B19B8E7F400B7997D /* VLLoungeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VLLoungeTableViewCell.h; sourceTree = "<group>"; };
+		99FAAE3C19B8E7F400B7997D /* VLLoungeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VLLoungeTableViewCell.m; sourceTree = "<group>"; };
 		D5DB61897A34407EA13CEEAA /* libPods-VoloeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoloeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8B94E23852D47E998DC32C7 /* Pods-VoloeTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoloeTests.xcconfig"; path = "Pods/Pods-VoloeTests.xcconfig"; sourceTree = "<group>"; };
 		F1E4C76309824F74A3F2D8E2 /* libPods-Voloe.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voloe.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -489,6 +492,8 @@
 				5A77151D19AF9FAB000FF43D /* Profile Grid View */,
 				5AACFBF619A2C7BE003D9504 /* VLDrawerTableViewCell.h */,
 				5AACFBF719A2C7BE003D9504 /* VLDrawerTableViewCell.m */,
+				99FAAE3B19B8E7F400B7997D /* VLLoungeTableViewCell.h */,
+				99FAAE3C19B8E7F400B7997D /* VLLoungeTableViewCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1169,6 +1174,7 @@
 				5AE5E1D7199F12E9007CDA0D /* AppDelegate.m in Sources */,
 				5A6F6CD119A2B82A003AA4EF /* VLProfileTableViewController.m in Sources */,
 				5A6F6CF219A2B8FE003AA4EF /* VLPrivacyViewController.m in Sources */,
+				99FAAE3D19B8E7F400B7997D /* VLLoungeTableViewCell.m in Sources */,
 				5A6F6CE319A2B891003AA4EF /* VLUsersTableViewController.m in Sources */,
 				5A6F6CDA19A2B855003AA4EF /* VLFriendsTableViewController.m in Sources */,
 				5A6F6CE919A2B8C2003AA4EF /* VLSettingsTableViewController.m in Sources */,

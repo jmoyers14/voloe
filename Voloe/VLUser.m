@@ -18,7 +18,7 @@ NSMutableArray *_contests;
 NSMutableArray *_followers;
 NSMutableArray *_activities;
 NSMutableArray *_notifications;
- */
+*/
 
 @synthesize listItems     = _listItems;
 @synthesize contests      = _contests;
